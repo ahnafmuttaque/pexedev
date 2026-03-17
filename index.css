@@ -1,0 +1,19 @@
+@layer base, components, utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .max-inline {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+}
