@@ -5,12 +5,13 @@
     --color-secondary-foreground: #686868;
     --color-link: #747474;
     --color-link-active: #7d60fd;
+    --color-footer-link-hover: #7556fd;
 
     --shadow-link: 0px 4px 40px 0px #1414141f;
     --border-link: 1.5px solid #f6f5f5;
 
     --font-primary: "Britti Sans Trial", sans-serif;
-    --font-secondary: "Behind the Nineties Sans", sans-serif;
+    --font-secondary: "Behind The Nineties Sans", sans-serif;
   }
   *,
   *::before,
@@ -71,15 +72,26 @@
     margin-inline: auto;
   }
 
-  .heading-one,
-  .heading-one--italic {
+  /* hedings */
+  .heading,
+  .special-italic {
     font-weight: 600;
+    font-family: var(--font-primary);
+  }
+
+  .heading--xl {
     font-size: 3.75rem;
     line-height: 66px;
     letter-spacing: -2%;
   }
 
-  .heading-one--italic {
+  .heading--lg {
+    font-size: 3rem;
+    line-height: 54px;
+    letter-spacing: -2%;
+  }
+
+  .special-italic {
     font-family: var(--font-secondary);
     font-style: italic;
     color: var(--color-primary-foreground);

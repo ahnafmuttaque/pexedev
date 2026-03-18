@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import Logo from "../logo/Logo";
 import { NAVIGATION_LINKS } from "../../data/navigation.data";
 import { NavLink } from "react-router";
