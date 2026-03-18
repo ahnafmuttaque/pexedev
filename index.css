@@ -1,19 +1,13 @@
-@layer base, components, utilities;
-
-@layer base {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@layer components {
+.max-inline {
+  max-width: 1440px;
+  margin-inline: auto;
 }
-
-@layer utilities {
-  .max-inline {
-    max-width: 1440px;
-    margin-inline: auto;
-  }
+.red {
+  background: red;
 }

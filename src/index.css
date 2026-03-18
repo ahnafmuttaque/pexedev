@@ -1,0 +1,78 @@
+@layer base, components, utilities;
+@layer base {
+  :root {
+    --color-primary-foreground: #7556fd;
+    --color-secondary-foreground: #686868;
+
+    --font-primary: "Britti Sans Trial", sans-serif;
+    --font-secondary: "Behind the Nineties Sans", sans-serif;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    font-family: var(--font-primary);
+    font-size: 16px;
+  }
+}
+
+@layer utilities {
+  .heading-one,
+  .italic-special {
+    font-weight: 600;
+    font-size: 3.75rem;
+    line-height: 66px;
+    letter-spacing: -2%;
+  }
+
+  .italic-special {
+    font-family: var(--font-secondary);
+    font-style: italic;
+    color: var(--color-primary-foreground);
+  }
+
+  .normal-text {
+    color: var(--color-secondary-foreground);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 24px;
+    letter-spacing: -1%;
+  }
+
+  .button {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: -1%;
+    padding: 14px 20px;
+    border-radius: 1000px;
+    border: none;
+  }
+  /* buttons */
+  .button.black {
+    background:
+      linear-gradient(0deg, #141414, #141414),
+      linear-gradient(
+        180deg,
+        rgba(20, 20, 20, 0.2) 26.74%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+    color: white;
+    box-shadow: 0px 4px 40px 0px #1414141f;
+  }
+
+  .button.white {
+    border: 1.5px solid #f6f5f5;
+    box-shadow: 0px 4px 40px 0px #1414141f;
+    background: white;
+    color: black;
+  }
+}
