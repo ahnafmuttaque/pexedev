@@ -3,6 +3,11 @@
   :root {
     --color-primary-foreground: #7556fd;
     --color-secondary-foreground: #686868;
+    --color-link: #747474;
+    --color-link-active: #7d60fd;
+
+    --shadow-link: 0px 4px 40px 0px #1414141f;
+    --border-link: 1.5px solid #f6f5f5;
 
     --font-primary: "Britti Sans Trial", sans-serif;
     --font-secondary: "Behind the Nineties Sans", sans-serif;
@@ -23,16 +28,58 @@
   }
 }
 
+@layer components {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .nav__links-container {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav__link {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+    /*letter-spacing: -1%;*/
+    text-transform: capitalize;
+  }
+
+  .nav__link:hover {
+    color: var(--color-link-active);
+  }
+
+  .nav__link.active {
+    color: var(--color-link-active);
+    border: var(--border-link);
+    padding: 10px 14px;
+    border-radius: 1000px;
+    box-shadow: var(--shadow-link);
+  }
+}
+
 @layer utilities {
+  .max-inline {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
   .heading-one,
-  .italic-special {
+  .heading-one--italic {
     font-weight: 600;
     font-size: 3.75rem;
     line-height: 66px;
     letter-spacing: -2%;
   }
 
-  .italic-special {
+  .heading-one--italic {
     font-family: var(--font-secondary);
     font-style: italic;
     color: var(--color-primary-foreground);
@@ -46,6 +93,7 @@
     letter-spacing: -1%;
   }
 
+  /* buttons */
   .button {
     font-family: var(--font-primary);
     font-weight: 600;
@@ -56,7 +104,6 @@
     border-radius: 1000px;
     border: none;
   }
-  /* buttons */
   .button.black {
     background:
       linear-gradient(0deg, #141414, #141414),
