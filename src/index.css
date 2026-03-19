@@ -39,43 +39,6 @@
   }
 }
 
-@layer components {
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
-  }
-  .nav__links-container {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .nav__link {
-    color: var(--color-link);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    letter-spacing: -1%;
-    text-transform: capitalize;
-  }
-
-  .nav__link:hover {
-    color: var(--color-link-active);
-  }
-
-  .nav__link.active {
-    color: var(--color-link-active);
-    border: var(--border-link);
-    padding: 10px 14px;
-    border-radius: 1000px;
-    box-shadow: var(--shadow-link);
-  }
-}
-
 @layer utilities {
   .max-inline {
     max-width: 1440px;

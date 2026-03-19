@@ -1,21 +1,23 @@
 import Logo from "../logo/Logo";
 import { NAVIGATION_LINKS } from "../../data/navigation.data";
 import { NavLink } from "react-router";
-
+import classes from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <>
-      <nav className="nav max-inline">
-        <div className="nav__logo-wrapper">
+      <nav className={`${classes.nav} max-inline`}>
+        <div className={classes["nav__logo-wrapper"]}>
           <Logo />
         </div>
-        <ul className="nav__links-container">
+        <ul className={classes["nav__links-container"]}>
           {NAVIGATION_LINKS.map((link) => (
             <li>
               <NavLink
                 to={link.href}
                 className={({ isActive }) =>
-                  isActive ? "nav__link active" : "nav__link"
+                  isActive
+                    ? `${classes["nav__link"]} ${classes["active"]}`
+                    : classes["nav__link"]
                 }
               >
                 {link.label}
