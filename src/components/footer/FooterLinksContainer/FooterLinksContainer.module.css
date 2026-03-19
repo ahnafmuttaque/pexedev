@@ -1,0 +1,30 @@
+.footer__links-container {
+}
+
+.footer__links-container-title {
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 1.25rem;
+  letter-spacing: -1%;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.footer__links-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer__link-listItem {
+  list-style-type: disc;
+}
+
+.footer__link {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -1%;
+  text-transform: capitalize;
+  color: var(--color-footer-link-listItem);
+}

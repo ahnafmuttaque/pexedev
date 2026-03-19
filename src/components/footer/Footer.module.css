@@ -9,8 +9,8 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.footer__abouts {
-}
+/*.footer__abouts {
+}*/
 
 .footer__abouts-title {
   max-width: 600px;
@@ -43,5 +43,11 @@
   cursor: pointer;
 }
 
-.footer__social-link {
+/*.footer__social-link {
+}*/
+
+.footer__links-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }

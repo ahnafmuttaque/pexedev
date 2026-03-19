@@ -6,6 +6,7 @@
     --color-link: #747474;
     --color-link-active: #7d60fd;
     --color-footer-link-hover: #7556fd;
+    --color-footer-link-listItem: #b1b1b1;
 
     --shadow-link: 0px 4px 40px 0px #1414141f;
     --border-link: 1.5px solid #f6f5f5;
@@ -27,6 +28,15 @@
     font-family: var(--font-primary);
     font-size: 16px;
   }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  li {
+    list-style-type: none;
+  }
 }
 
 @layer components {
@@ -46,10 +56,10 @@
   .nav__link {
     color: var(--color-link);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 20px;
-    /*letter-spacing: -1%;*/
+    letter-spacing: -1%;
     text-transform: capitalize;
   }
 
@@ -97,6 +107,7 @@
     color: var(--color-primary-foreground);
   }
 
+  /* normal paragraph text */
   .normal-text {
     color: var(--color-secondary-foreground);
     font-weight: 400;

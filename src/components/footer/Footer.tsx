@@ -1,6 +1,9 @@
 import { Link } from "react-router";
 import classes from "./Footer.module.css";
 import { SOCIAL_LINKS } from "../../data/navigation.data";
+import FooterLinksContainer from "./FooterLinksContainer/FooterLinksContainer";
+import { FOOTERlINKS } from "../../data/navigation.data";
+import Copyright from "./Cooyright/Copyright";
 
 const Footer = () => {
   return (
@@ -23,8 +26,24 @@ const Footer = () => {
           </ul>
         </div>
         {/* footer left side content */}
-        <div>{/*list of links*/}</div>
+        <div className={classes["footer__links-grid"]}>
+          {/* first links are navigation links, so they are being rendered first */}
+          <FooterLinksContainer
+            title={FOOTERlINKS[0].title}
+            links={FOOTERlINKS[0].links}
+            type="navigation"
+          />
+          {FOOTERlINKS.slice(1).map((section) => (
+            <FooterLinksContainer
+              key={section.title}
+              title={section.title}
+              links={section.links}
+              type="link"
+            />
+          ))}
+        </div>
       </div>
+      <Copyright />
     </footer>
   );
 };

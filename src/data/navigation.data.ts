@@ -54,3 +54,30 @@ export const SOCIAL_LINKS = [
     href: "https://twitter.com",
   },
 ] as const;
+
+export const FOOTERlINKS = [
+  {
+    title: "quick links",
+    links: NAVIGATION_LINKS.map((link) => link.label),
+  },
+  {
+    title: "our services",
+    links: [
+      "UI/UX Design",
+      "Web Design",
+      "Mobile App Development",
+      "Web Development",
+      "Product Design",
+    ],
+  },
+  {
+    title: "contact info",
+    links: ["hello@pixeDev.com", "+1 (555) 123-4567", "Dhaka, Bangladesh"],
+  },
+];
+
+export const COPYRIGHT_LINKS = [
+  { label: "privacy policy", href: "/privacyPolicy" },
+  { label: "terms & conditions", href: "/terms" },
+  { label: "help & support", href: "/help" },
+] as const;

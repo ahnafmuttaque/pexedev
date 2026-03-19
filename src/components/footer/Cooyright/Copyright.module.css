@@ -1,0 +1,23 @@
+.footer__copyright {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__copyright-list-item {
+  list-style-type: disc;
+}
+
+.footer__copyright-list-item:first-child {
+  list-style-type: none;
+}
+
+.footer__copyright-link {
+  text-transform: capitalize;
+}
