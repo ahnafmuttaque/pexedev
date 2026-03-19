@@ -64,7 +64,14 @@
     letter-spacing: -2%;
   }
 
-  .special-italic {
+  .heading--md {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -2%;
+  }
+
+  .heading--blueItalic {
     font-family: var(--font-secondary);
     font-style: italic;
     color: var(--color-primary-foreground);
@@ -82,15 +89,16 @@
   /* buttons */
   .button {
     font-family: var(--font-primary);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     line-height: 22px;
-    letter-spacing: -1%;
+    letter-spacing: 1%;
     padding: 14px 20px;
     border-radius: 1000px;
     border: none;
+    text-transform: capitalize;
   }
-  .button.black {
+  .button--black {
     background:
       linear-gradient(0deg, #141414, #141414),
       linear-gradient(
@@ -102,7 +110,7 @@
     box-shadow: 0px 4px 40px 0px #1414141f;
   }
 
-  .button.white {
+  .button--white {
     border: 1.5px solid #f6f5f5;
     box-shadow: 0px 4px 40px 0px #1414141f;
     background: white;

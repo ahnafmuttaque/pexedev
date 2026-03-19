@@ -1,12 +1,12 @@
-import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
-
+import Hero from "./hero/Hero";
+import styles from "./Homepage.module.css";
 const Homepage = () => {
   return (
-    <>
+    <section className={`${styles.homepage}`}>
       <Navbar />
-      <Footer />
-    </>
+      <Hero />
+    </section>
   );
 };
 
