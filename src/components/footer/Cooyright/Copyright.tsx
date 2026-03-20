@@ -1,4 +1,4 @@
-import { COPYRIGHT_LINKS } from "../../../data/navigation.data";
+import { COPYRIGHT_LINKS } from "../../../data/shared.data";
 import classes from "./Copyright.module.css";
 
 export const Copyright = () => {
@@ -9,7 +9,10 @@ export const Copyright = () => {
       </span>
       <ul className={classes["footer__copyright-list"]}>
         {COPYRIGHT_LINKS.map((link) => (
-          <li className={classes["footer__copyright-list-item"]}>
+          <li
+            key={link.label}
+            className={classes["footer__copyright-list-item"]}
+          >
             <a
               className={classes["footer__copyright-link"]}
               href={link.href}

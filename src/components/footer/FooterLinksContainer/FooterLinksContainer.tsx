@@ -19,7 +19,7 @@ const FooterLinksContainer: FC<FooterLinksContainerProps> = ({
       <ul className={classes["footer__links-ul"]}>
         {links.map((link) => {
           return (
-            <li className={classes["footer__link-listItem"]}>
+            <li key={link} className={classes["footer__link-listItem"]}>
               {type === "navigation" ? (
                 <Link className={classes["footer__link"]} to={link}>
                   {link}

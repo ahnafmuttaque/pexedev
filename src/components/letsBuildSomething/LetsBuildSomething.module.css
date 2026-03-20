@@ -1,0 +1,126 @@
+.contactUs__wrapper {
+  background: linear-gradient(
+    78.17deg,
+    rgba(255, 255, 255, 0.96) 26.85%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding-block: 112px;
+}
+
+.contactUs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactUs__title {
+  color: var(--color-mild-black);
+  max-width: 740px;
+  text-transform: capitalize;
+}
+
+.contactUs__description {
+  margin-block: 16px 48px;
+}
+
+.contactUs__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactUs__listItem {
+  color: var(--color-mild-black);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 20px;
+  list-style-type: disc;
+}
+
+/* contact us form styles */
+.contactUs__form {
+  background-color: white;
+  box-shadow: 0px 0px 80px 0px #1414141f;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.contactUs__form > form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.contactUs__form-item:first-child,
+.contactUs__form-item:last-child {
+  grid-column: span 2;
+}
+
+.contactUs__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactUs__form-item > label,
+.contactUs__form-item > input,
+.contactUs__form-item > textarea,
+.contactUs__form-item > select {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--color-mild-black);
+  line-height: 22px;
+  letter-spacing: -1%;
+  text-transform: capitalize;
+}
+
+.contactUs__form-required {
+  color: #ff1616;
+}
+
+.contactUs__form-item > input,
+.contactUs__form-item > textarea,
+.contactUs__form-item > select {
+  border: 1.5px solid #f1f1f1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background-color: var(--color-input-background);
+  color: var(--color-input-placeholder);
+}
+
+.contactUs__form-item > input {
+  min-width: 271.5px;
+}
+
+.contactUs__form-item > textarea {
+  height: 96px;
+}
+
+.contactUs__formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.contactUs__upload {
+  background-color: var(--color-input-background);
+  border: 1.5px solid var(--color-input-border);
+  padding: 4px 4px 4px 16px;
+}
+
+.contactUs__formActions > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.contactUs__upload > div {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+}

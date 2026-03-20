@@ -7,6 +7,10 @@
     --color-link-active: #7d60fd;
     --color-footer-link-hover: #7556fd;
     --color-footer-link-listItem: #b1b1b1;
+    --color-mild-black: #141414;
+    --color-input-border: #f1f1f1;
+    --color-input-background: #fafafa;
+    --color-input-placeholder: var(--color-secondary-foreground);
 
     --shadow-link: 0px 4px 40px 0px #1414141f;
     --border-link: 1.5px solid #f6f5f5;
@@ -27,6 +31,15 @@
     height: 100%;
     font-family: var(--font-primary);
     font-size: 16px;
+  }
+
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  textarea {
+    resize: none;
   }
 
   a {
@@ -99,7 +112,7 @@
   /* buttons */
   .button {
     font-family: var(--font-primary);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 22px;
     letter-spacing: 1%;
@@ -116,6 +129,7 @@
         rgba(20, 20, 20, 0.2) 26.74%,
         rgba(255, 255, 255, 0.2) 100%
       );
+
     color: white;
     box-shadow: 0px 4px 40px 0px #1414141f;
   }

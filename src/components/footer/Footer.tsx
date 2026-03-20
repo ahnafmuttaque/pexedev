@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import classes from "./Footer.module.css";
-import { SOCIAL_LINKS } from "../../data/navigation.data";
+import { SOCIAL_LINKS } from "../../data/shared.data";
 import FooterLinksContainer from "./FooterLinksContainer/FooterLinksContainer";
-import { FOOTERlINKS } from "../../data/navigation.data";
+import { FOOTERlINKS } from "../../data/shared.data";
 import Copyright from "./Cooyright/Copyright";
 
 const Footer = () => {

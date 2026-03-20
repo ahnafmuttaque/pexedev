@@ -1,6 +1,6 @@
 export const HERO = {
   title: {
-    main: "Designing High-Impact Digital Experiences for Business ",
+    normal: "Designing High-Impact Digital Experiences for Business ",
     special: "Growth.",
   },
   subtitle: {
@@ -15,7 +15,7 @@ export const HERO = {
   ],
   stat: {
     title: {
-      main: "company stats.",
+      normal: "company stats.",
       special: "growth",
     },
     values: [

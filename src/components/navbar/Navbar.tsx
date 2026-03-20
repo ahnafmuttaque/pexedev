@@ -1,5 +1,5 @@
 import Logo from "../logo/Logo";
-import { NAVIGATION_LINKS } from "../../data/navigation.data";
+import { NAVIGATION_LINKS } from "../../data/shared.data";
 import { NavLink } from "react-router";
 import classes from "./Navbar.module.css";
 const Navbar = () => {

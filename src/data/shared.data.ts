@@ -81,3 +81,18 @@ export const COPYRIGHT_LINKS = [
   { label: "terms & conditions", href: "/terms" },
   { label: "help & support", href: "/help" },
 ] as const;
+
+export const CONTACT_US = {
+  title: {
+    normal: "let's build something great ",
+    special: "together.",
+  },
+  description:
+    "Have a project idea? Let’s discuss how we can help bring your vision to life.",
+  metaLists: [
+    "24-Hour Response Guarantee",
+    "Detailed Project Analysis within 48 Hours",
+    "Free Strategic Business Consultation",
+    "Exclusive Value-Added Support",
+  ],
+} as const;

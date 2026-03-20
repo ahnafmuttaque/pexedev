@@ -24,7 +24,7 @@ const Hero = () => {
 
           {/* Hero title */}
           <h1 className={`${styles["hContent__title"]} heading--xl`}>
-            {HERO.title.main}
+            {HERO.title.normal}
             <span className=" heading--blueItalic">{HERO.title.special}</span>
           </h1>
           <p className={`${styles["hContent__paragraph"]} normal-text`}>
@@ -50,25 +50,23 @@ const Hero = () => {
         <aside className={styles["hStat"]}>
           <ul>
             <li className={`${styles["hStat__title"]} heading--md`}>
-              {HERO.stat.title.main.split(" ")[0]}{" "}
+              {HERO.stat.title.normal.split(" ")[0]}{" "}
               <span className="heading--blueItalic">
                 {HERO.stat.title.special}
               </span>{" "}
-              {HERO.stat.title.main.split(" ")[1]}
+              {HERO.stat.title.normal.split(" ")[1]}
             </li>
           </ul>
           <ul className={styles["hStat__container"]}>
             {HERO.stat.values.map((value) => (
-              <>
-                <li className={styles["hStat__item"]}>
-                  <span className={styles["hStat__item-value"]}>
-                    {value.value}+
-                  </span>
-                  <span className={styles["hStat__item-label"]}>
-                    {value.label}
-                  </span>
-                </li>
-              </>
+              <li key={value.label} className={styles["hStat__item"]}>
+                <span className={styles["hStat__item-value"]}>
+                  {value.value}+
+                </span>
+                <span className={styles["hStat__item-label"]}>
+                  {value.label}
+                </span>
+              </li>
             ))}
           </ul>
         </aside>
