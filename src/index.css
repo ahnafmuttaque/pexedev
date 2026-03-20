@@ -39,6 +39,16 @@
   }
 }
 
+@layer componenets {
+  .layout {
+    background-image: url("/assets/hero-bg.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
+    background-position: top left;
+  }
+}
+
 @layer utilities {
   .max-inline {
     max-width: 1440px;

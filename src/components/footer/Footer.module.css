@@ -29,13 +29,14 @@
 
 .footer__social-link-wrapper {
   list-style-type: none;
-  padding: 7px;
   border-radius: 1000px;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  height: 40px;
+  aspect-ratio: 1;
 }
 
 .footer__social-link-wrapper:hover {
@@ -43,8 +44,10 @@
   cursor: pointer;
 }
 
-/*.footer__social-link {
-}*/
+.footer__social-link {
+  height: 26px;
+  width: 26px;
+}
 
 .footer__links-grid {
   display: flex;

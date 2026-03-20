@@ -35,6 +35,7 @@ const Hero = () => {
               const classes = ["button--black", "button--white"];
               return (
                 <button
+                  key={button.label}
                   className={`${styles["hContent__button"]} button ${classes[index]}`}
                   onClick={() => navigate(button.href)}
                 >
@@ -57,7 +58,7 @@ const Hero = () => {
             </li>
           </ul>
           <ul className={styles["hStat__container"]}>
-            {HERO.stat.values.map((value, index) => (
+            {HERO.stat.values.map((value) => (
               <>
                 <li className={styles["hStat__item"]}>
                   <span className={styles["hStat__item-value"]}>
@@ -67,9 +68,6 @@ const Hero = () => {
                     {value.label}
                   </span>
                 </li>
-                {index < HERO.stat.values.length - 1 && (
-                  <li className={styles["hStat__item-border"]}></li>
-                )}
               </>
             ))}
           </ul>

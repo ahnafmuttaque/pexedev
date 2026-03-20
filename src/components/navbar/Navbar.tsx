@@ -11,7 +11,7 @@ const Navbar = () => {
         </div>
         <ul className={classes["nav__links-container"]}>
           {NAVIGATION_LINKS.map((link) => (
-            <li>
+            <li key={link.label}>
               <NavLink
                 to={link.href}
                 className={({ isActive }) =>

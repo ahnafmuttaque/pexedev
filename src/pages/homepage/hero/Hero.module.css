@@ -85,6 +85,26 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  position: relative;
+}
+
+.hStat__item:not(:last-child) {
+  padding-right: 16px;
+}
+
+.hStat__item:not(:first-child) {
+  padding-left: 18px;
+}
+
+.hStat__item:not(:last-child)::before {
+  content: "";
+  height: 16px;
+  width: 1px;
+  background-color: #d1d5db;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hStat__item-value {

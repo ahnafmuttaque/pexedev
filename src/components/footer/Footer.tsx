@@ -17,7 +17,10 @@ const Footer = () => {
           </h2>
           <ul className={classes["footer__social-links-container"]}>
             {SOCIAL_LINKS.map((link) => (
-              <li className={classes["footer__social-link-wrapper"]}>
+              <li
+                key={link.label}
+                className={classes["footer__social-link-wrapper"]}
+              >
                 <Link className={classes["footer__social-link"]} to={link.href}>
                   <img src={link.icon} alt={link.label} />
                 </Link>
