@@ -71,6 +71,8 @@
   color: var(--color-mild-black);
   line-height: 22px;
   letter-spacing: -1%;
+}
+::placeholder {
   text-transform: capitalize;
 }
 

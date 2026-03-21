@@ -96,3 +96,48 @@ export const CONTACT_US = {
     "Exclusive Value-Added Support",
   ],
 } as const;
+
+export const FAQ_SECTION = {
+  title: "Have Questions?We\’ve Got Answers.",
+  description:
+    "Learn more about our services, process, and how we work with clients.",
+  button: "contact us",
+  faqs: [
+    {
+      id: "1",
+      question: "What information do you need to start a project?",
+      answer:
+        "Project timelines depend on the scope and complexity of the work. Most projects are completed within 2–6 weeks, including design, development, and revisions.",
+    },
+    {
+      id: "2",
+      question: "How long does a typical project take?",
+      answer:
+        "Project timelines depend on the scope and complexity of the work. Most projects are completed within 2–6 weeks, including design, development, and revisions.",
+    },
+    {
+      id: "3",
+      question: "Do you provide custom designs or use templates?",
+      answer:
+        "Project timelines depend on the scope and complexity of the work. Most projects are completed within 2–6 weeks, including design, development, and revisions.",
+    },
+    {
+      id: "4",
+      question: "How many revisions are included in the project?",
+      answer:
+        "Project timelines depend on the scope and complexity of the work. Most projects are completed within 2–6 weeks, including design, development, and revisions.",
+    },
+    {
+      id: "5",
+      question: "Will my website be mobile-friendly?",
+      answer:
+        "Project timelines depend on the scope and complexity of the work. Most projects are completed within 2–6 weeks, including design, development, and revisions.",
+    },
+    {
+      id: "6 ",
+      question: "Do you offer support after the project launch?",
+      answer:
+        "Project timelines depend on the scope and complexity of the work. Most projects are completed within 2–6 weeks, including design, development, and revisions.",
+    },
+  ],
+} as const;

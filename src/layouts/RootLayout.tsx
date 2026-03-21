@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import LetsBuildSomething from "../components/letsBuildSomething/LetsBuildSomething";
+import FaqSection from "../components/faqSection/FaqSection";
 
 export default function RootLayout() {
   return (
@@ -10,6 +11,7 @@ export default function RootLayout() {
       <Navbar />
       <Outlet />
       <LetsBuildSomething />
+      <FaqSection />
       <Footer />
     </main>
   );
