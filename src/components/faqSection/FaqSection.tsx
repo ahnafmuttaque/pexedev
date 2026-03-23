@@ -44,7 +44,11 @@ const FaqSection = () => {
                 className={styles["faqSection__icon"]}
                 onClick={() => onFaqClick(faq.id)}
               >
-                <img src={icons.plus} alt={faq.question} />
+                {activeFaq === faq.id ? (
+                  <img src={icons.minus} alt={faq.question} />
+                ) : (
+                  <img src={icons.plus} alt={faq.question} />
+                )}
               </span>
             </div>
             <p
