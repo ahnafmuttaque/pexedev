@@ -1,0 +1,39 @@
+.projects__wrapper {
+  color: white;
+  background-color: black;
+}
+
+.projects {
+  padding-block: 112px;
+}
+
+.projects__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__title {
+  max-width: 900px;
+}
+
+.projects__menu {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+.projects__menu-item {
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  border-radius: 999px;
+  letter-spacing: -2%;
+  padding-inline: 14px;
+  padding-block: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.projects__menu-item--active {
+  background-color: var(--color-primary-foreground);
+}
