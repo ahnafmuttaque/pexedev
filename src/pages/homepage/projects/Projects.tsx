@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./Projects.module.css";
+import { PROJECTS } from "../../../data/projects.data";
+import Project from "./project/Project";
 
 export const Projects = () => {
   const [activeItem, setActiveItem] = useState<string>("All");
@@ -9,6 +11,7 @@ export const Projects = () => {
   return (
     <div className={styles["projects__wrapper"]}>
       <section className={`${styles.projects} max-inline`}>
+        {/* projects header */}
         <div className={styles["projects__header"]}>
           <h2 className={`${styles["projects__title"]} heading heading--xl`}>
             Combining Design, and Innovation to Build{" "}
@@ -27,6 +30,13 @@ export const Projects = () => {
               ),
             )}
           </ul>
+        </div>
+
+        {/* projects content */}
+        <div className={styles["projects__gallery"]}>
+          {PROJECTS.map((project) => (
+            <Project key={project.thumbnail} {...project} />
+          ))}
         </div>
       </section>
     </div>
