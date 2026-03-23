@@ -1,0 +1,32 @@
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 152px;
+  margin-block: 112px 124px;
+}
+
+.about-us__gallery {
+  position: relative;
+}
+
+.about-us__gallery > img:last-of-type {
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+}
+
+.about-us__play-button {
+  width: 54px;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  border: none;
+  background: radial-gradient(50% 50% at 50% 50%, #a788ff 0%, #7556fd 100%);
+  position: absolute;
+  bottom: -13px;
+  right: -18px;
+}
+
+.about-us__description {
+  margin-block: 16px 48px;
+}
