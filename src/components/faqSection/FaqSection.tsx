@@ -1,27 +1,57 @@
+import { useState } from "react";
 import { FAQ_SECTION } from "../../data/shared.data";
 import styles from "./FaqSection.module.css";
 
 const FaqSection = () => {
   const [activeFaq, setActiveFaq] = useState<string | undefined>(undefined);
+
+  const onFaqClick = (faqId: string) => {
+    if (activeFaq === faqId) {
+      setActiveFaq(undefined);
+    } else {
+      setActiveFaq(faqId);
+    }
+  };
+  const { title, description, button, faqs, icons } = FAQ_SECTION;
   return (
     <section className={`${styles.faqSection} max-inline`}>
       {/*faq right content*/}
       <section className={styles["faqSection__content"]}>
-        <h2 className={styles["faqSection__title"]}>{FAQ_SECTION.title}</h2>
-        <p className={styles["faqSection__description"]}>
-          {FAQ_SECTION.description}
+        <h2 className={`${styles["faqSection__title"]}  heading heading--xl`}>
+          {title.firstHalf}
+          <span className="heading heading--blueItalic">{title.special}</span>
+          <br />
+          {title.lastHalf}
+        </h2>
+        <p className={`${styles["faqSection__description"]} normal-text`}>
+          {description}
         </p>
-        <button className={`${styles["faqSection__button"]}`}>
-          {FAQ_SECTION.button}
+        <button
+          className={`${styles["faqSection__button"]} button button--black`}
+        >
+          {button}
         </button>
       </section>
       <section className={styles["faqSection__faq"]}>
-        {FAQ_SECTION.faqs.map((faq, index) => (
+        {faqs.map((faq, index) => (
           <div key={index} className={styles["faqSection__faq-item"]}>
-            <h3 className={styles["faqSection__faq-question"]}>
-              {faq.question}
-            </h3>
-            <p className={styles["faqSection__faq-answer"]}>{faq.answer}</p>
+            <div className={styles["faqSection__faq-question"]}>
+              <h2>
+                <span className="bullet-point"></span>
+                <span>{faq.question}</span>
+              </h2>
+              <span
+                className={styles["faqSection__icon"]}
+                onClick={() => onFaqClick(faq.id)}
+              >
+                <img src={icons.plus} alt={faq.question} />
+              </span>
+            </div>
+            <p
+              className={`${styles["faqSection__faq-answer"]} ${activeFaq === faq.id ? styles.visible : ""}`}
+            >
+              {faq.answer}
+            </p>
           </div>
         ))}
       </section>

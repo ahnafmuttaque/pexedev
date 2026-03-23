@@ -98,10 +98,18 @@ export const CONTACT_US = {
 } as const;
 
 export const FAQ_SECTION = {
-  title: "Have Questions?We\’ve Got Answers.",
+  title: {
+    firstHalf: "Have ",
+    special: "Questions? ",
+    lastHalf: "We've Got Answers.",
+  },
   description:
     "Learn more about our services, process, and how we work with clients.",
   button: "contact us",
+  icons: {
+    plus: "/assets/plus.png",
+    minus: "/assets/minus.png",
+  },
   faqs: [
     {
       id: "1",

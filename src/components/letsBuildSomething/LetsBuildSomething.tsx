@@ -27,7 +27,7 @@ const ContactUsInput: FC<ContactUsInputPorps> = ({ children, ...rest }) => {
     case "select":
       inputNode = (
         <select {...rest} defaultValue={"default"}>
-          <option selected value={"default"} disabled>
+          <option value={"default"} disabled>
             Select your Range
           </option>
         </select>
@@ -56,7 +56,7 @@ const LetsBuildSomething = () => {
       <main className={`${styles.contactUs} max-inline`}>
         {/* right grid*/}
         <div className={styles.contactUs__content}>
-          <h2 className={`${styles.contactUs__title}  heading--xl`}>
+          <h2 className={`${styles.contactUs__title} heading  heading--xl`}>
             {title.normal}{" "}
             <span className="heading--blueItalic">{title.special}</span>
           </h2>

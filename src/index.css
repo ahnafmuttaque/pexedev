@@ -140,4 +140,14 @@
     background: white;
     color: black;
   }
+
+  .bullet-point {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 6px;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: 9999px;
+  }
 }
