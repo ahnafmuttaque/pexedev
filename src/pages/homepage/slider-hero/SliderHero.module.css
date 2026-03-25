@@ -1,0 +1,17 @@
+.slider {
+  margin-bottom: 80px;
+}
+
+.slider__marqueeItem {
+  height: 219px;
+  width: 360px;
+  overflow: hidden;
+  margin-right: 16px;
+  border-radius: 10px;
+  /*box-shadow: 0px 0px 80px 0px #1414141f;*/
+}
+
+.slider__marqueeImage {
+  height: 100%;
+  width: 100%;
+}

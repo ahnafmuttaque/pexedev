@@ -34,8 +34,8 @@ export const Projects = () => {
 
         {/* projects content */}
         <div className={styles["projects__gallery"]}>
-          {PROJECTS.map((project) => (
-            <Project key={project.thumbnail} {...project} />
+          {PROJECTS.map((project, index) => (
+            <Project key={index} {...project} />
           ))}
         </div>
       </section>

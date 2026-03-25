@@ -2,36 +2,6 @@
   position: relative;
 }
 
-.project__view-button {
-  height: 138px;
-  aspect-ratio: 1;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.04) 100%
-  );
-  backdrop-filter: blur(30px);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  border-radius: 99999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: context-menu;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: -1%;
-  color: white;
-}
-
-.project:hover .project__view-button {
-  opacity: 1;
-}
-
 .project:first-child {
   grid-column: span 2;
 }

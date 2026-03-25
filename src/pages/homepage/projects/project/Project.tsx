@@ -13,10 +13,6 @@ const Project: FC<ProjectProps> = ({
 }) => {
   return (
     <section className={styles["project"]}>
-      {/* view project button */}
-      <a href="#" className={styles["project__view-button"]}>
-        View Project
-      </a>
       <div className={styles["project__thumbnail"]}>
         <img src={thumbnail} alt={title} />
       </div>
@@ -27,8 +23,8 @@ const Project: FC<ProjectProps> = ({
         </div>
         <p className={styles["project__description"]}>{description}</p>
         <ul className={styles["project__tags"]}>
-          {tags.map((tag) => (
-            <li key={tag} className={styles["project__tag"]}>
+          {tags.map((tag, index) => (
+            <li key={index} className={styles["project__tag"]}>
               | {tag}
             </li>
           ))}
