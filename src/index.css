@@ -150,4 +150,8 @@
     background-color: black;
     border-radius: 9999px;
   }
+
+  .bullet-point.bullet-point--blue {
+    background-color: var(--color-primary-foreground);
+  }
 }

@@ -1,6 +1,7 @@
 import AboutUs from "./about-us/AboutUs";
 import Capability from "./capability/Capability";
 import CollaborateFrame from "./collaborateFrame/CollaborateFrame";
+import DesignProcess from "./design-process/DesignProcess";
 import Hero from "./hero/Hero";
 import styles from "./Homepage.module.css";
 import Projects from "./projects/Projects";
@@ -14,6 +15,7 @@ const Homepage = () => {
       <AboutUs />
       <Projects />
       <Capability />
+      <DesignProcess />
     </section>
   );
 };
