@@ -9,7 +9,7 @@ const images = [
   "/assets/marquees/marquee (4).png",
 ];
 
-export default function SliderHero() {
+const SliderHero = () => {
   return (
     <section className={styles.slider}>
       {Array.from({ length: 2 }).map((_, index) => (
@@ -36,4 +36,6 @@ export default function SliderHero() {
       ))}
     </section>
   );
-}
+};
+
+export default SliderHero;

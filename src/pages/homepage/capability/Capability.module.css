@@ -1,0 +1,25 @@
+.capability {
+  padding-block: 112px;
+}
+
+.capability__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.capability__title {
+  margin-bottom: 16px;
+}
+
+.capability__description {
+  max-width: 728px;
+}
+
+.capability__lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  margin-top: 80px;
+}

@@ -1,0 +1,32 @@
+import { CAPABILITIES } from "../../../data/homepage.data";
+import CapabilityItem from "./capability-item/CapabilityItem";
+import styles from "./Capability.module.css";
+
+const Capability = () => {
+  return (
+    <section className={`${styles.capability} max-inline`}>
+      {/* capability header */}
+      <header className={styles["capability__header"]}>
+        <div>
+          <h2 className={`${styles["capability__title"]} heading heading--xl`}>
+            Our Digital{" "}
+            <span className="heading--blueItalic">Capabilities.</span>
+          </h2>
+          <p className={`${styles["capability__description"]} normal-text`}>
+            From strategy to design and development, we build digital products
+            that move businesses forward.
+          </p>
+        </div>
+        <button className="button button--black">Contact Us</button>
+      </header>
+
+      <section className={styles["capability__lists"]}>
+        {CAPABILITIES.items.map((item, index) => (
+          <CapabilityItem key={index} {...item} />
+        ))}
+      </section>
+    </section>
+  );
+};
+
+export default Capability;

@@ -1,4 +1,5 @@
 import AboutUs from "./about-us/AboutUs";
+import Capability from "./capability/Capability";
 import CollaborateFrame from "./collaborateFrame/CollaborateFrame";
 import Hero from "./hero/Hero";
 import styles from "./Homepage.module.css";
@@ -12,6 +13,7 @@ const Homepage = () => {
       <CollaborateFrame />
       <AboutUs />
       <Projects />
+      <Capability />
     </section>
   );
 };

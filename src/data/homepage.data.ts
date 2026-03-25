@@ -26,3 +26,42 @@ export const HERO = {
     ],
   },
 } as const;
+
+export const CAPABILITIES = {
+  items: [
+    {
+      title: "UX/UI Design.",
+      description:
+        "We design user-centered interfaces that are intuitive, modern, and visually engaging.",
+      wide: "/assets/capability/a-wide.png",
+      long: "/assets/capability/a-long.png",
+    },
+    {
+      title: "UX/UI Design.",
+      description:
+        "We design user-centered interfaces that are intuitive, modern, and visually engaging.",
+      wide: "/assets/capability/a-wide.png",
+      long: "/assets/capability/a-long.png",
+    },
+    {
+      title: "UX/UI Design.",
+      description:
+        "We design user-centered interfaces that are intuitive, modern, and visually engaging.",
+      wide: "/assets/capability/a-wide.png",
+      long: "/assets/capability/a-long.png",
+    },
+    {
+      title: "UX/UI Design.",
+      description:
+        "We design user-centered interfaces that are intuitive, modern, and visually engaging.",
+      wide: "/assets/capability/a-wide.png",
+      long: "/assets/capability/a-long.png",
+    },
+  ],
+  button: {
+    label: "Explore Services",
+    href: "",
+    icon: "/assets/arrow-up-right.png",
+  },
+  spiral: "/assets/spiral.png",
+} as const;
