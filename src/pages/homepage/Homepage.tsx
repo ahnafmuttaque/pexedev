@@ -5,6 +5,7 @@ import DesignProcess from "./design-process/DesignProcess";
 import Hero from "./hero/Hero";
 import styles from "./Homepage.module.css";
 import Projects from "./projects/Projects";
+import Reviews from "./reviews/Reviews";
 import SliderHero from "./slider-hero/SliderHero";
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
       <Projects />
       <Capability />
       <DesignProcess />
+      <Reviews />
     </section>
   );
 };
