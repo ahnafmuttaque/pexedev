@@ -1,0 +1,107 @@
+.pricing__wrapper {
+  position: relative;
+}
+
+.pricing__wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/assets/background/pricing-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.pricing {
+  padding-block: 112px;
+}
+
+.pricing__title,
+.pricing__description {
+  text-align: center;
+}
+
+.pricing__description {
+  margin-block: 16px 80px;
+}
+
+.pricing__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.pricing__card {
+  padding: 24px 24px 40px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.pricing__card:nth-child(2) {
+  background-image: url(/assets/professional-package-rectangle.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 200px;
+  background-attachment: scroll;
+}
+
+.pricing__card-title,
+.pricing__list-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 24px;
+  letter-spacing: -1%;
+  color: var(--color-mild-black);
+}
+
+.pricing__card-description,
+.pricing__card-price-period {
+  font-size: 0.875rem;
+  line-height: 18px;
+  color: var(--color-secondary-foreground);
+}
+.pricing__card-description {
+  margin-block: 8px 24px;
+}
+
+.pricing__card-price-amount {
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 39px;
+  letter-spacing: -3%;
+  color: var(--color-primary-foreground);
+}
+.pricing__card-button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -1%;
+  border: none;
+  width: 100%;
+  padding-block: 14px;
+  text-align: center;
+  border-radius: 9999px;
+  margin-block: 40px;
+  background-color: var(--color-mild-black);
+  color: white;
+}
+
+.pricing__card:not(:nth-child(2)) > .pricing__card-button {
+  background-color: #e7e7e7;
+  color: var(--color-mild-black);
+}
+
+.pricing__list-title {
+  margin-bottom: 20px;
+}
+.pricing__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pricing__list-item {
+  list-style-type: disc;
+}

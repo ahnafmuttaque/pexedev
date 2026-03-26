@@ -134,3 +134,74 @@ export const REVIEWS = {
     ],
   },
 } as const;
+
+export const PRICING_DATA = [
+  {
+    title: "Starter Package",
+    description:
+      "Ideal for startups and small projects looking to launch quickly.",
+    price: 799,
+    button: {
+      label: "Get Started Today",
+    },
+    listItems: [
+      "1 Project Included",
+      "Basic UI/UX Design",
+      "Responsive Web Development",
+      "1 Month Support",
+      "Project Consultation",
+    ],
+  },
+  {
+    title: "Professional Package",
+    description:
+      "Perfect for growing businesses needing a complete digital solution.",
+    price: 1299,
+    button: {
+      label: "Start your Project",
+    },
+    listItems: [
+      "Up to 3 Projects",
+      "Full UI/UX Design",
+      "Web & Mobile Development",
+      "3 Months Support",
+      "SEO & Performance Optimization",
+      "Design System Setup",
+    ],
+  },
+  {
+    title: "Business Package",
+    description:
+      "Designed for companies that require advanced features and custom workflows.",
+    price: 1799,
+    button: {
+      label: "Get This Package",
+    },
+    listItems: [
+      "Up to 5 Projects",
+      "Advanced UI/UX Design",
+      "Web, Mobile & SaaS Development",
+      "6 Months Support",
+      "SEO, Analytics, & Optimization",
+      "Custom Integrations",
+    ],
+  },
+  {
+    title: "Enterprise Package",
+    description:
+      "Custom solutions for large-scale projects and enterprise-level needs.",
+    price: null,
+    button: {
+      label: "Request a Quote",
+    },
+    listItems: [
+      "Unlimited Projects",
+      "Dedicated Design",
+      "Development Team",
+      "Multi-platform Solution (Web/App)",
+      "Priority Support & Maintenance",
+      "Custom Integrations & API",
+      "Full Strategy & Consulting",
+    ],
+  },
+];
