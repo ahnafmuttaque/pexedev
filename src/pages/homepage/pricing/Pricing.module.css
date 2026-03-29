@@ -1,20 +1,3 @@
-.pricing__wrapper {
-  position: relative;
-}
-
-.pricing__wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(/assets/background/pricing-background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: scroll;
-  z-index: -1;
-  opacity: 0.2;
-}
-
 .pricing__title,
 .pricing__description {
   text-align: center;

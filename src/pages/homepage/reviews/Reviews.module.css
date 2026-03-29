@@ -1,23 +1,5 @@
-.reviews__wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
 .reviews {
   padding-block: 112px;
-}
-.reviews::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(/assets/background/design-process.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
-  opacity: 0.3;
-  z-index: -1;
-  scale: 3;
 }
 
 .reviews__title {

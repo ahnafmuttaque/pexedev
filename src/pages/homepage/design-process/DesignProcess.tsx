@@ -1,11 +1,15 @@
 import type { FC } from "react";
 import styles from "./DesignProcess.module.css";
 import CenteredSectionHeader from "../../../components/centered-section-header/CenteredSectionHeader";
+import BackgroundWrapper from "../../../components/background-wrapper/BackgroundWrapper";
+import processBackgrond from "/assets/background/design-process.jpg";
 
 const Process = () => {
   return (
     <div className={styles["design-process__step"]}>
-      <h3 className={`${styles["design-process__step-title"]} normal-text`}>
+      <h3
+        className={`${styles["design-process__step-title"]} text--md text--secondary`}
+      >
         <span>Step 01</span>
         <span className="bullet-point bullet-point--blue"></span>
         <span>Discovery &amp; Strategy</span>
@@ -44,11 +48,25 @@ const DesignProcess = () => {
       <div className={styles["design-process__steps"]}>
         {Array.from({ length: 4 }).map((_, index, arr) => (
           <div key={index} className={styles["design-process__row"]}>
-            <Process />
+            <BackgroundWrapper
+              url={processBackgrond}
+              backgroundColor="white"
+              opacity={12}
+              zIndex={1}
+            >
+              <Process />
+            </BackgroundWrapper>
             {index === arr.length - 1 && (
               <Direction src="/assets/direction/last-row.png" />
             )}
-            <Process />
+            <BackgroundWrapper
+              url={processBackgrond}
+              backgroundColor="white"
+              opacity={12}
+              zIndex={1}
+            >
+              <Process />
+            </BackgroundWrapper>
           </div>
         ))}
         <section className={styles["design-process__centered-image"]}>

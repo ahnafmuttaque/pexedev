@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import styles from "./Reviews.module.css";
 import { REVIEWS } from "../../../data/homepage.data";
+import BackgroundWrapper from "../../../components/background-wrapper/BackgroundWrapper";
 
 interface ReviewGridProps {
   rating: number;
@@ -44,7 +45,11 @@ const ReviewGrid: FC<ReviewGridProps> = ({ rating, description, author }) => {
 
 const Reviews = () => {
   return (
-    <div className={styles["reviews__wrapper"]}>
+    <BackgroundWrapper
+      scale={3}
+      url="/assets/background/design-process.jpg"
+      opacity={12}
+    >
       <section className={`${styles.reviews} max-inline`}>
         <h2 className={`${styles["reviews__title"]} heading heading--xl`}>
           Some things <span className="heading--blueItalic">said about</span> us
@@ -70,7 +75,7 @@ const Reviews = () => {
           </div>
         </section>
       </section>
-    </div>
+    </BackgroundWrapper>
   );
 };
 

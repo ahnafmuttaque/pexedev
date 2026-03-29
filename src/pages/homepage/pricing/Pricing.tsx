@@ -3,6 +3,8 @@ import { PRICING_DATA } from "../../../data/homepage.data";
 import styles from "./Pricing.module.css";
 import pricingIcon from "/assets/pricing-icon.png";
 import CenteredSectionHeader from "../../../components/centered-section-header/CenteredSectionHeader";
+import BackgroundWrapper from "../../../components/background-wrapper/BackgroundWrapper";
+import pricingBackgroundImage from "/assets/background/pricing-background.jpg";
 
 type PricingCardProps = (typeof PRICING_DATA)[number];
 
@@ -51,7 +53,7 @@ const PricingCard: FC<PricingCardProps> = ({
 
 const Pricing = () => {
   return (
-    <div className={styles["pricing__wrapper"]}>
+    <BackgroundWrapper url={pricingBackgroundImage} opacity={12}>
       <CenteredSectionHeader
         className={styles.pricing}
         title="Invest in Your Digital "
@@ -64,7 +66,7 @@ const Pricing = () => {
           ))}
         </section>
       </CenteredSectionHeader>
-    </div>
+    </BackgroundWrapper>
   );
 };
 

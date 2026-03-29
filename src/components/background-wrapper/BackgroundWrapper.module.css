@@ -1,0 +1,13 @@
+.background-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.backgrond-wrapper__image-container {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
