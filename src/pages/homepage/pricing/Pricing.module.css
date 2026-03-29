@@ -15,10 +15,6 @@
   opacity: 0.2;
 }
 
-.pricing {
-  padding-block: 112px;
-}
-
 .pricing__title,
 .pricing__description {
   text-align: center;
@@ -77,6 +73,7 @@
 
 .pricing__card-button {
   margin-block: 40px;
+  width: 100%;
 }
 
 .pricing__card:not(:nth-child(2)) > .pricing__card-button {

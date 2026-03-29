@@ -1,0 +1,12 @@
+.centered-section-header {
+  padding-block: 112px;
+}
+
+.centered-section-header__title,
+.centered-section-header__description {
+  text-align: center;
+}
+
+.centered-section-header__description {
+  margin-block: 16px 80px;
+}

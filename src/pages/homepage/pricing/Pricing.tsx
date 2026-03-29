@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { PRICING_DATA } from "../../../data/homepage.data";
 import styles from "./Pricing.module.css";
 import pricingIcon from "/assets/pricing-icon.png";
+import CenteredSectionHeader from "../../../components/centered-section-header/CenteredSectionHeader";
 
 type PricingCardProps = (typeof PRICING_DATA)[number];
 
@@ -51,23 +52,18 @@ const PricingCard: FC<PricingCardProps> = ({
 const Pricing = () => {
   return (
     <div className={styles["pricing__wrapper"]}>
-      <section className={`${styles.pricing} max-inline`}>
-        <h2 className={`${styles["pricing__title"]} heading heading--xl`}>
-          Invest in Your Digital
-          <span className="heading--blueItalic">Success.</span>
-        </h2>
-        <p
-          className={`${styles["pricing__description"]} text--md text--secondary`}
-        >
-          Choose the plan that fits your business needs and start building
-          exceptional digital products today.
-        </p>
+      <CenteredSectionHeader
+        className={styles.pricing}
+        title="Invest in Your Digital "
+        special="Success."
+        description="Choose the plan that fits your business needs and start building exceptional digital products today."
+      >
         <section className={styles["pricing__cards"]}>
           {PRICING_DATA.map((cData) => (
             <PricingCard key={cData.title} {...cData} />
           ))}
         </section>
-      </section>
+      </CenteredSectionHeader>
     </div>
   );
 };

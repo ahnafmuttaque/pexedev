@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import styles from "./DesignProcess.module.css";
+import CenteredSectionHeader from "../../../components/centered-section-header/CenteredSectionHeader";
 
 const Process = () => {
   return (
@@ -34,15 +35,12 @@ const Direction: FC<DirectionProps> = ({ src, alt = "process-direction" }) => {
 
 const DesignProcess = () => {
   return (
-    <section className={`${styles["design-process"]} max-inline`}>
-      <h2 className={`${styles["design-process__title"]} heading heading--xl`}>
-        Our Design <span className="heading--blueItalic">Process.</span>
-      </h2>
-      <p
-        className={`${styles["design-process__description"]} text--md text--secondary`}
-      >
-        A proven process to deliver exceptional digital products.
-      </p>
+    <CenteredSectionHeader
+      className={styles["design-process"]}
+      title="Our Design "
+      special="Process."
+      description="A proven process to deliver exceptional digital products."
+    >
       <div className={styles["design-process__steps"]}>
         {Array.from({ length: 4 }).map((_, index, arr) => (
           <div key={index} className={styles["design-process__row"]}>
@@ -63,7 +61,7 @@ const DesignProcess = () => {
           />
         </section>
       </div>
-    </section>
+    </CenteredSectionHeader>
   );
 };
 
