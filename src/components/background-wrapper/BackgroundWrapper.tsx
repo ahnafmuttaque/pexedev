@@ -6,6 +6,7 @@ type BackgroundWrapperProps = {
   opacity: number;
   scale?: number;
   backgroundColor?: string;
+  className?: string;
   zIndex?: number;
   children: ReactNode;
 };
@@ -16,13 +17,14 @@ const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
   scale = 1,
   backgroundColor = "transparent",
   zIndex = -1,
+  className = "",
   children,
 }) => {
   if (opacity < 0 || opacity > 100) {
     throw new Error("Opacity must be between 0 and 100");
   }
   return (
-    <div className={styles["background-wrapper"]}>
+    <div className={`${styles["background-wrapper"]} ${className}`}>
       {children}
       <div
         className={styles["backgrond-wrapper__image-container"]}
