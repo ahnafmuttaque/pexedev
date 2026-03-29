@@ -17,7 +17,9 @@ const Hero = () => {
                 className={styles["hContent__subtitle-icon"]}
               />
             </div>
-            <p className={styles["hContent__subtitle-text"]}>
+            <p
+              className={`${styles["hContent__subtitle-text"]} text--secondary text--xs text--semibold`}
+            >
               {HERO.subtitle.text}
             </p>
           </div>
@@ -27,7 +29,9 @@ const Hero = () => {
             {HERO.title.normal}
             <span className=" heading--blueItalic">{HERO.title.special}</span>
           </h1>
-          <p className={`${styles["hContent__paragraph"]} normal-text`}>
+          <p
+            className={`${styles["hContent__paragraph"]} text--md text--secondary`}
+          >
             {HERO.paragraph}
           </p>
           <div className={styles["hContent__buttons"]}>

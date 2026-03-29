@@ -20,14 +20,22 @@ const ReviewGrid: FC<ReviewGridProps> = ({ rating, description, author }) => {
           <img key={index} src={REVIEWS.ratingIcon} alt="rating star" />
         ))}
       </div>
-      <p className={styles["review__item-description"]}>{description}</p>
+      <p
+        className={`${styles["review__item-description"]} text--lg text--secondary`}
+      >
+        {description}
+      </p>
       <div className={styles["review__item-author"]}>
         <div className={styles["review__item-author-avatar"]}>
           <img src={author.avatar} alt={author.name} />
         </div>
         <div className={styles["review__item-author-info"]}>
           <p className={styles["review__item-author-name"]}>{author.name}</p>
-          <p className={styles["review__item-author-title"]}>{author.title}</p>
+          <p
+            className={`${styles["review__item-author-title"]} text--secondary`}
+          >
+            {author.title}
+          </p>
         </div>
       </div>
     </div>

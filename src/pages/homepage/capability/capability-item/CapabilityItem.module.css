@@ -23,7 +23,7 @@
 .capability__item-description {
   max-width: 360px;
   margin-block: 2px 18px;
-  font-size: 1rem;
+  line-height: 24px;
 }
 
 .capability__item-button {

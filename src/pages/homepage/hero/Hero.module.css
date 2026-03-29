@@ -32,14 +32,6 @@
   background: radial-gradient(50% 50% at 50% 50%, #a588ff 0%, #7d60fd 76.44%);
 }
 
-.hContent__subtitle-text {
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: -1%;
-  color: var(--color-secondary-foreground);
-}
-
 .hContent__title {
   max-width: 728px;
   margin-block: 20px 16px;
@@ -48,6 +40,7 @@
 .hContent__paragraph {
   max-width: 728px;
   margin-bottom: 48px;
+  line-height: 24px;
 }
 
 .hContent__buttons {

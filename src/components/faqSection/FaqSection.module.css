@@ -38,9 +38,6 @@
 }
 
 .faqSection__faq-answer {
-  line-height: 20px;
-  letter-spacing: -1%;
-  color: var(--color-secondary-foreground);
   box-sizing: border-box;
   height: 0;
   padding-top: 0px;

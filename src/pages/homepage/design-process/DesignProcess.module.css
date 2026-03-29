@@ -124,6 +124,10 @@
   color: var(--color-primary-foreground);
 }
 
+.design-process__step-description {
+  line-height: 26px;
+}
+
 .design-process__centered-image {
   position: absolute;
   left: 50%;

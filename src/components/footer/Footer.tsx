@@ -13,7 +13,7 @@ const Footer = () => {
         <div className={classes.footer__abouts}>
           <h2 className={`${classes["footer__abouts-title"]} heading--lg`}>
             We help startups and businesses design and build impactful{" "}
-            <span className="special-italic">digital products.</span>
+            <span className="heading--blueItalic">digital products.</span>
           </h2>
           <ul className={classes["footer__social-links-container"]}>
             {SOCIAL_LINKS.map((link) => (

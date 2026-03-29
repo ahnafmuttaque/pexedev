@@ -10,7 +10,7 @@ const Process = () => {
         <span>Discovery &amp; Strategy</span>
       </h3>
       <p
-        className={`${styles["design-process__step-description"]} normal-text`}
+        className={`${styles["design-process__step-description"]} text--md text--secondary`}
       >
         We start by understanding your business goals, product vision, and
         target audience. This helps us align the project direction with your
@@ -38,7 +38,9 @@ const DesignProcess = () => {
       <h2 className={`${styles["design-process__title"]} heading heading--xl`}>
         Our Design <span className="heading--blueItalic">Process.</span>
       </h2>
-      <p className={`${styles["design-process__description"]} normal-text`}>
+      <p
+        className={`${styles["design-process__description"]} text--md text--secondary`}
+      >
         A proven process to deliver exceptional digital products.
       </p>
       <div className={styles["design-process__steps"]}>

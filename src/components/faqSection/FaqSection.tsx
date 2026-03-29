@@ -23,7 +23,9 @@ const FaqSection = () => {
           <br />
           {title.lastHalf}
         </h2>
-        <p className={`${styles["faqSection__description"]} normal-text`}>
+        <p
+          className={`${styles["faqSection__description"]} text--md text--secondary`}
+        >
           {description}
         </p>
         <button
@@ -52,7 +54,7 @@ const FaqSection = () => {
               </span>
             </div>
             <p
-              className={`${styles["faqSection__faq-answer"]} ${activeFaq === faq.id ? styles.visible : ""}`}
+              className={`${styles["faqSection__faq-answer"]} text--base text--secondary ${activeFaq === faq.id ? styles.visible : ""}`}
             >
               {faq.answer}
             </p>

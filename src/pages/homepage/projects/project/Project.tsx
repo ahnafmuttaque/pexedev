@@ -21,7 +21,11 @@ const Project: FC<ProjectProps> = ({
           <h3 className={styles["project__title"]}>{title}</h3>
           <span className={styles["project__time"]}>{time}</span>
         </div>
-        <p className={styles["project__description"]}>{description}</p>
+        <p
+          className={`${styles["project__description"]} text--base text--secondary`}
+        >
+          {description}
+        </p>
         <ul className={styles["project__tags"]}>
           {tags.map((tag, index) => (
             <li key={index} className={styles["project__tag"]}>

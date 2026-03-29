@@ -14,7 +14,9 @@ const CapabilityItem: FC<CapabilityItemProps> = ({
     <div className={styles["capability-item"]}>
       <div className={styles["capability__item-content"]}>
         <h3 className={styles["capability__item-title"]}>{title}</h3>
-        <p className={`${styles["capability__item-description"]} normal-text`}>
+        <p
+          className={`${styles["capability__item-description"]} text--base text--secondary`}
+        >
           {description}
         </p>
         <button className={styles["capability__item-button"]}>

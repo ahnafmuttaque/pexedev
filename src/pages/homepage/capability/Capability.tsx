@@ -12,7 +12,9 @@ const Capability = () => {
             Our Digital{" "}
             <span className="heading--blueItalic">Capabilities.</span>
           </h2>
-          <p className={`${styles["capability__description"]} normal-text`}>
+          <p
+            className={`${styles["capability__description"]} text--md text--secondary`}
+          >
             From strategy to design and development, we build digital products
             that move businesses forward.
           </p>

@@ -19,7 +19,9 @@ export const AboutUs = () => {
           Helping Businesses Grow Through{" "}
           <span className="heading--blueItalic">Digital</span> Design.
         </h2>
-        <p className={`${styles["about-us__description"]} normal-text`}>
+        <p
+          className={`${styles["about-us__description"]} text--md text--secondary `}
+        >
           Our agency specializes in crafting modern digital experiences through
           thoughtful design and scalable development. We combine creativity,
           strategy, and technology to deliver products that not only look great

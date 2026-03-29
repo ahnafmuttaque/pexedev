@@ -15,16 +15,24 @@ const PricingCard: FC<PricingCardProps> = ({
   return (
     <div className={styles["pricing__card"]}>
       <h3 className={styles["pricing__card-title"]}>{title}</h3>
-      <p className={styles["pricing__card-description"]}>{description}</p>
+      <p
+        className={`${styles["pricing__card-description"]} text--sm text--secondary`}
+      >
+        {description}
+      </p>
       <div className={styles["pricing__card-price"]}>
         <span className={styles["pricing__card-price-amount"]}>
           {price ? `$${price}` : <img src={pricingIcon} alt="pricing icon" />}
         </span>{" "}
-        <span className={styles["pricing__card-price-period"]}>
+        <span
+          className={`${styles["pricing__card-price-period"]} text--sm text--secondary`}
+        >
           /{price ? "monthly" : "Custom Pricing"}
         </span>
       </div>
-      <button className={`${styles["pricing__card-button"]}`}>
+      <button
+        className={`button button--black ${styles["pricing__card-button"]}`}
+      >
         {button.label}
       </button>
 
@@ -48,7 +56,9 @@ const Pricing = () => {
           Invest in Your Digital
           <span className="heading--blueItalic">Success.</span>
         </h2>
-        <p className={`${styles["pricing__description"]} normal-text`}>
+        <p
+          className={`${styles["pricing__description"]} text--md text--secondary`}
+        >
           Choose the plan that fits your business needs and start building
           exceptional digital products today.
         </p>
