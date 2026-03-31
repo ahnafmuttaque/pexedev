@@ -10,8 +10,8 @@ export default function RootLayout() {
     <main className="layout">
       <Navbar />
       <Outlet />
-      <LetsBuildSomething />
       <FaqSection />
+      <LetsBuildSomething />
       <Footer />
     </main>
   );

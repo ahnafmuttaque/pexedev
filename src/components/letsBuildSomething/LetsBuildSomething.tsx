@@ -1,6 +1,7 @@
 import styles from "./LetsBuildSomething.module.css";
 import { CONTACT_US } from "../../data/shared.data";
 import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
+import BackgroundWrapper from "../background-wrapper/BackgroundWrapper";
 
 type InputProps = ComponentPropsWithoutRef<"input"> & {
   children: ReactNode;
@@ -52,7 +53,10 @@ const ContactUsInput: FC<ContactUsInputPorps> = ({ children, ...rest }) => {
 const LetsBuildSomething = () => {
   const { title, description, metaLists } = CONTACT_US;
   return (
-    <section className={styles.contactUs__wrapper}>
+    <BackgroundWrapper
+      url="/assets/professional-package-rectangle.png"
+      opacity={20}
+    >
       <main className={`${styles.contactUs} max-inline`}>
         {/* right grid*/}
         <div className={styles.contactUs__content}>
@@ -131,7 +135,7 @@ const LetsBuildSomething = () => {
           </div>
         </div>
       </main>
-    </section>
+    </BackgroundWrapper>
   );
 };
 

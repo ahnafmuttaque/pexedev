@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FAQ_SECTION } from "../../data/shared.data";
 import styles from "./FaqSection.module.css";
+import BackgroundWrapper from "../background-wrapper/BackgroundWrapper";
+import designProcessBackgrond from "/assets/background/design-process.jpg";
 
 const FaqSection = () => {
   const [activeFaq, setActiveFaq] = useState<string | undefined>(undefined);
@@ -36,29 +38,37 @@ const FaqSection = () => {
       </section>
       <section className={styles["faqSection__faq"]}>
         {faqs.map((faq, index) => (
-          <div key={index} className={styles["faqSection__faq-item"]}>
-            <div className={styles["faqSection__faq-question"]}>
-              <h2>
-                <span className="bullet-point"></span>
-                <span>{faq.question}</span>
-              </h2>
-              <span
-                className={styles["faqSection__icon"]}
-                onClick={() => onFaqClick(faq.id)}
+          <BackgroundWrapper
+            key={index}
+            url={designProcessBackgrond}
+            backgroundColor="white"
+            opacity={12}
+            borderRadius="16px"
+          >
+            <div className={styles["faqSection__faq-item"]}>
+              <div className={styles["faqSection__faq-question"]}>
+                <h2>
+                  <span className="bullet-point"></span>
+                  <span>{faq.question}</span>
+                </h2>
+                <span
+                  className={styles["faqSection__icon"]}
+                  onClick={() => onFaqClick(faq.id)}
+                >
+                  {activeFaq === faq.id ? (
+                    <img src={icons.minus} alt={faq.question} />
+                  ) : (
+                    <img src={icons.plus} alt={faq.question} />
+                  )}
+                </span>
+              </div>
+              <p
+                className={`${styles["faqSection__faq-answer"]} text--base text--secondary ${activeFaq === faq.id ? styles.visible : ""}`}
               >
-                {activeFaq === faq.id ? (
-                  <img src={icons.minus} alt={faq.question} />
-                ) : (
-                  <img src={icons.plus} alt={faq.question} />
-                )}
-              </span>
+                {faq.answer}
+              </p>
             </div>
-            <p
-              className={`${styles["faqSection__faq-answer"]} text--base text--secondary ${activeFaq === faq.id ? styles.visible : ""}`}
-            >
-              {faq.answer}
-            </p>
-          </div>
+          </BackgroundWrapper>
         ))}
       </section>
     </section>

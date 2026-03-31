@@ -9,6 +9,7 @@ type BackgroundWrapperProps = {
   className?: string;
   zIndex?: number;
   children: ReactNode;
+  borderRadius?: string;
 };
 
 const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
@@ -19,6 +20,7 @@ const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
   zIndex = -1,
   className = "",
   children,
+  borderRadius = "0",
 }) => {
   if (opacity < 0 || opacity > 100) {
     throw new Error("Opacity must be between 0 and 100");
@@ -34,6 +36,7 @@ const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
           opacity: opacity / 100,
           scale,
           zIndex,
+          borderRadius,
         }}
       ></div>
     </div>

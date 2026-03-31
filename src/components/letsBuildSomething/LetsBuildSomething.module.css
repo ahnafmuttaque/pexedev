@@ -1,16 +1,17 @@
-.contactUs__wrapper {
+/*.contactUs__wrapper {
   background: linear-gradient(
     78.17deg,
     rgba(255, 255, 255, 0.96) 26.85%,
     rgba(255, 255, 255, 0) 100%
   );
   padding-block: 112px;
-}
+}*/
 
 .contactUs {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-block: 112px;
 }
 
 .contactUs__title {
