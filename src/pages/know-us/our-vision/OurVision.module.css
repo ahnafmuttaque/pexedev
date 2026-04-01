@@ -1,0 +1,8 @@
+.our-vision {
+  display: flex;
+  align-items: center;
+}
+
+.our-vision__title {
+  max-width: 1144px;
+}
