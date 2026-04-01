@@ -108,9 +108,22 @@
     color: white;
   }
 
+  /*font classes*/
+  .font--secondary {
+    font-family: var(--font-secondary);
+  }
+
   /* normal paragraph text */
   .text--semibold {
     font-weight: 600;
+  }
+
+  .text--bold {
+    font-weight: 700;
+  }
+
+  .text--italic {
+    font-style: italic;
   }
 
   .text--secondary {

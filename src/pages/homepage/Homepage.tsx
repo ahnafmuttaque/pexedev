@@ -1,3 +1,4 @@
+import FaqSection from "../../components/faqSection/FaqSection";
 import AboutUs from "./about-us/AboutUs";
 import Capability from "./capability/Capability";
 import Collaborate from "./collaborate/Collaborate";
@@ -21,6 +22,7 @@ const Homepage = () => {
       <DesignProcess />
       <Reviews />
       <Pricing />
+      <FaqSection />
     </section>
   );
 };

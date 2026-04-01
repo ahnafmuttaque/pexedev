@@ -1,3 +1,4 @@
+import FaqSection from "../../components/faqSection/FaqSection";
 import DiscoverUs from "./discover-us/DiscoverUs";
 import ExploreInnovation from "./explore-innovation/ExploreInnovation";
 import styles from "./KnowUs.module.css";
@@ -11,6 +12,7 @@ const KnowUs = () => {
       <ExploreInnovation />
       <OurVision />
       <OurTalent />
+      <FaqSection />
     </div>
   );
 };

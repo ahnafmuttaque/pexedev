@@ -10,7 +10,7 @@ const Hero = () => {
       <section className={`${styles["hero"]}  max-inline`}>
         {/* homepage top sub title*/}
         <section className={styles["hContent"]}>
-          <SubtitleWithIcon text={HERO.subtitle} />
+          <SubtitleWithIcon>{HERO.subtitle}</SubtitleWithIcon>
 
           {/* Hero title */}
           <h1 className={`${styles["hContent__title"]} heading--xl`}>
