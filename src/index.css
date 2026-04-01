@@ -117,6 +117,10 @@
     color: var(--color-secondary-foreground);
   }
 
+  .text--mild-black {
+    color: var(--color-mild-black);
+  }
+
   .text--xs {
     font-size: 0.75rem;
     line-height: 16px;
@@ -143,6 +147,19 @@
   .text--lg {
     font-size: 1.5rem;
     line-height: 32px;
+  }
+
+  /* text alignment */
+  .text--center {
+    text-align: center;
+  }
+
+  .text--left {
+    text-align: left;
+  }
+
+  .text--right {
+    text-align: right;
   }
 
   /* paddings */

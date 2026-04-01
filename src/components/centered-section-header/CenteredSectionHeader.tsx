@@ -5,7 +5,7 @@ interface CenteredSectionHeaderProps {
   className?: string;
   title: string;
   special: string;
-  description: string;
+  description?: string;
   children: ReactNode;
 }
 
@@ -17,19 +17,19 @@ const CenteredSectionHeader: FC<CenteredSectionHeaderProps> = ({
   children,
 }) => {
   return (
-    <section
-      className={`${className} ${styles["centered-section-header"]} max-inline`}
-    >
+    <section className={`${className} padding__v-112 max-inline`}>
       <h1
         className={`${styles["centered-section-header__title"]} heading heading--xl`}
       >
         {title} <span className="heading--blueItalic">{special}</span>
       </h1>
-      <p
-        className={`${styles["centered-section-header__description"]} text--md text--secondary`}
-      >
-        {description}
-      </p>
+      {description && (
+        <p
+          className={`${styles["centered-section-header__description"]} text--md text--secondary`}
+        >
+          {description}
+        </p>
+      )}
       {children}
     </section>
   );

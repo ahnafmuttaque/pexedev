@@ -1,0 +1,50 @@
+.our-talent {
+  background-color: var(--color-capability-background);
+}
+
+.our-talent__talents {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.talent {
+  margin-top: 80px;
+}
+
+.talent__logo {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.talent__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.talent__info-box > h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 1%;
+  margin-bottom: 4px;
+}
+
+.talent__info-box > p {
+  font-size: 0.875rem;
+  line-height: 18px;
+  letter-spacing: -1%;
+}
+
+.telent__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+}

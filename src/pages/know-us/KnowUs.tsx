@@ -1,6 +1,7 @@
 import DiscoverUs from "./discover-us/DiscoverUs";
 import ExploreInnovation from "./explore-innovation/ExploreInnovation";
 import styles from "./KnowUs.module.css";
+import OurTalent from "./our-talent/OurTalent";
 import OurVision from "./our-vision/OurVision";
 
 const KnowUs = () => {
@@ -9,6 +10,7 @@ const KnowUs = () => {
       <DiscoverUs />
       <ExploreInnovation />
       <OurVision />
+      <OurTalent />
     </div>
   );
 };
