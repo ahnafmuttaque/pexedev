@@ -31,7 +31,6 @@ const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
       <div
         className={styles["backgrond-wrapper__image-container"]}
         style={{
-          backgroundColor,
           backgroundImage: `url(${url})`,
           opacity: opacity / 100,
           scale,
@@ -39,6 +38,17 @@ const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
           borderRadius,
         }}
       ></div>
+      {backgroundColor !== "transparent" && (
+        <div
+          style={{
+            backgroundColor,
+            position: "absolute",
+            inset: "0",
+            borderRadius,
+            zIndex: -2,
+          }}
+        ></div>
+      )}
     </div>
   );
 };

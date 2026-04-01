@@ -3,10 +3,7 @@ export const HERO = {
     normal: "Designing High-Impact Digital Experiences for Business ",
     special: "Growth.",
   },
-  subtitle: {
-    icon: { src: "/assets/solar-star.png", alt: "solar star icon" },
-    text: "Delivering Smart Solutions for Businesses.",
-  },
+  subtitle: "Delivering Smart Solutions for Businesses.",
   paragraph:
     "We help startups and businesses build modern, scalable, and user-friendly digital products. From strategy and design to development, we create impactful digital experiences that help brands grow.",
   buttons: [

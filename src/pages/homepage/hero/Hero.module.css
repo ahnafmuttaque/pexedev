@@ -11,27 +11,6 @@
   align-items: flex-start;
 }
 
-.hContent__subtitle {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background-color: white;
-  border: 1.5px solid #f6f5f5;
-  box-shadow: 0px 4px 40px 0px #1414141f;
-  border-radius: 8px;
-  padding: 4px 10px 4px 4px;
-}
-
-.hContent__subtitle-icon-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 24px;
-  aspect-ratio: 1;
-  border-radius: 4px;
-  background: radial-gradient(50% 50% at 50% 50%, #a588ff 0%, #7d60fd 76.44%);
-}
-
 .hContent__title {
   max-width: 728px;
   margin-block: 20px 16px;

@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 import { HERO } from "../../../data/homepage.data";
 import { useNavigate } from "react-router";
+import SubtitleWithIcon from "../../../components/subtitle-with-icon/SubtitleWithIcon";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -9,20 +10,7 @@ const Hero = () => {
       <section className={`${styles["hero"]}  max-inline`}>
         {/* homepage top sub title*/}
         <section className={styles["hContent"]}>
-          <div className={styles["hContent__subtitle"]}>
-            <div className={styles["hContent__subtitle-icon-wrapper"]}>
-              <img
-                src={HERO.subtitle.icon.src}
-                alt={HERO.subtitle.icon.alt}
-                className={styles["hContent__subtitle-icon"]}
-              />
-            </div>
-            <p
-              className={`${styles["hContent__subtitle-text"]} text--secondary text--xs text--semibold`}
-            >
-              {HERO.subtitle.text}
-            </p>
-          </div>
+          <SubtitleWithIcon text={HERO.subtitle} />
 
           {/* Hero title */}
           <h1 className={`${styles["hContent__title"]} heading--xl`}>

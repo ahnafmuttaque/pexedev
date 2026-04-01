@@ -104,6 +104,10 @@
     color: var(--color-primary-foreground);
   }
 
+  .heading--white {
+    color: white;
+  }
+
   /* normal paragraph text */
   .text--semibold {
     font-weight: 600;
@@ -139,6 +143,16 @@
   .text--lg {
     font-size: 1.5rem;
     line-height: 32px;
+  }
+
+  /* paddings */
+
+  .padding__b-112 {
+    padding-bottom: 112px;
+  }
+
+  .padding__v-112 {
+    padding-block: 112px;
   }
 
   /* buttons */

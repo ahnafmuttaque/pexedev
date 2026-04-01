@@ -1,0 +1,21 @@
+.explore-innovation__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explore-innovation__shapes {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.explore-innovation__title {
+  margin-block: 80px 16px;
+}
+
+.explore-innovation__paragraph {
+  max-width: 1200px;
+  margin-bottom: 48px;
+  color: #e0e0e0;
+}
