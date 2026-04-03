@@ -1,0 +1,10 @@
+[data-theme="dark"] .portfolio {
+  background-color: red;
+}
+
+.portfolio {
+  background-attachment: scroll;
+  background-color: #7556fd;
+  color: white;
+  text-align: center;
+}

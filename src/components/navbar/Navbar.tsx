@@ -2,9 +2,10 @@ import Logo from "../logo/Logo";
 import { NAVIGATION_LINKS } from "../../data/shared.data";
 import { NavLink } from "react-router";
 import classes from "./Navbar.module.css";
+
 const Navbar = () => {
   return (
-    <>
+    <div className={classes["nav__wrapper"]}>
       <nav className={`${classes.nav} max-inline`}>
         <div className={classes["nav__logo-wrapper"]}>
           <Logo />
@@ -26,7 +27,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 

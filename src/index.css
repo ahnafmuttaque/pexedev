@@ -3,8 +3,11 @@
   :root {
     --color-primary-foreground: #7556fd;
     --color-secondary-foreground: #686868;
+    /* nav related colors */
+    --color-nav-background: white;
     --color-link: #747474;
     --color-link-active: #7d60fd;
+    /* end*/
     --color-footer-link-hover: #7556fd;
     --color-footer-link-listItem: #b1b1b1;
     --color-mild-black: #141414;
@@ -14,10 +17,21 @@
     --color-capability-background: #f6f6f6;
     --shadow-link: 0px 4px 40px 0px #1414141f;
     --border-link: 1.5px solid #f6f5f5;
+    --bg-link: white;
 
     --font-primary: "Britti Sans Trial", sans-serif;
     --font-secondary: "Behind The Nineties Sans", sans-serif;
   }
+
+  [data-theme="dark"] {
+    --color-nav-background: black;
+    --color-nav-link: var(--color-footer-link-listItem);
+    --color-link-active: white;
+    --border-link: 1.5px solid #f6f5f514;
+    --shadow-link: none;
+    --bg-link: #ffffff1f;
+  }
+
   *,
   *::before,
   *::after {
@@ -70,6 +84,14 @@
 
   .padding__v-112 {
     padding-block: 112px;
+  }
+
+  .bg--black {
+    background-color: black;
+  }
+
+  .text--white {
+    color: white;
   }
 
   /* hedings */
