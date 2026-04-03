@@ -13,7 +13,7 @@ const Hero = () => {
           <SubtitleWithIcon>{HERO.subtitle}</SubtitleWithIcon>
 
           {/* Hero title */}
-          <h1 className={`${styles["hContent__title"]} heading--xl`}>
+          <h1 className={`${styles["hContent__title"]} heading--xxl`}>
             {HERO.title.normal}
             <span className=" heading--blueItalic">{HERO.title.special}</span>
           </h1>

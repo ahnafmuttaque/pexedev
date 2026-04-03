@@ -1,0 +1,20 @@
+.whole-project__close {
+  display: flex;
+  align-items: center;
+  margin: 8px 8px 0 auto;
+  background: none;
+  border: none;
+  gap: 6px;
+}
+
+.close__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--color-input-background);
+  border: 1.5px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

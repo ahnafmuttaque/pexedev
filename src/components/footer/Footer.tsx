@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={`${classes.footer__content} max-inline`}>
         {/* footer right side content */}
         <div className={classes.footer__abouts}>
-          <h2 className={`${classes["footer__abouts-title"]} heading--lg`}>
+          <h2 className={`${classes["footer__abouts-title"]} heading--xl`}>
             We help startups and businesses design and build impactful{" "}
             <span className="heading--blueItalic">digital products.</span>
           </h2>

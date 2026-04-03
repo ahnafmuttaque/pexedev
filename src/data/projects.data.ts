@@ -1,5 +1,6 @@
 export const PROJECTS = [
   {
+    id: 1,
     thumbnail: "/assets/projects/project-one.png",
     title: "Vaiera Lain.",
     time: "1.5  Month",
@@ -7,6 +8,7 @@ export const PROJECTS = [
     tags: ["UX Research", "Visual Identify", "Visual Identify"],
   },
   {
+    id: 2,
     thumbnail: "/assets/projects/project-two.png",
     title: "Vaiera Lain.",
     time: "1.5  Month",
@@ -14,6 +16,7 @@ export const PROJECTS = [
     tags: ["UX Research", "Visual Identify", "Visual Identify"],
   },
   {
+    id: 3,
     thumbnail: "/assets/projects/project-three.png",
     title: "Vaiera Lain.",
     time: "1.5  Month",
@@ -21,6 +24,7 @@ export const PROJECTS = [
     tags: ["UX Research", "Visual Identify", "Visual Identify"],
   },
   {
+    id: 4,
     thumbnail: "/assets/projects/project-four.png",
     title: "Vaiera Lain.",
     time: "1.5  Month",
@@ -28,6 +32,7 @@ export const PROJECTS = [
     tags: ["UX Research", "Visual Identify", "Visual Identify"],
   },
   {
+    id: 5,
     thumbnail: "/assets/projects/project-five.png",
     title: "Vaiera Lain.",
     time: "1.5  Month",

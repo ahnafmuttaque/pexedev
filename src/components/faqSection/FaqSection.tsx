@@ -19,7 +19,7 @@ const FaqSection = () => {
     <section className={`${styles.faqSection} max-inline`}>
       {/*faq right content*/}
       <section className={styles["faqSection__content"]}>
-        <h2 className={`${styles["faqSection__title"]}  heading heading--xl`}>
+        <h2 className={`${styles["faqSection__title"]}  heading heading--xxl`}>
           {title.firstHalf}
           <span className="heading heading--blueItalic">{title.special}</span>
           <br />

@@ -43,11 +43,3 @@
 .projects__menu-item--active {
   background-color: var(--color-primary-foreground);
 }
-
-.projects__gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(710px, 1fr));
-  column-gap: 17px;
-  row-gap: 23px;
-  margin-top: 80px;
-}

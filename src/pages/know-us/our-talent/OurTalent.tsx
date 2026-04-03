@@ -100,7 +100,7 @@ const OurTalent = () => {
   return (
     <section className={`${styles["our-talent"]}  padding__v-112`}>
       <h1
-        className={`${styles["our-talent__title"]} text--center heading heading--xl`}
+        className={`${styles["our-talent__title"]} text--center heading heading--xxl`}
       >
         The <span className="heading--blueItalic">Talent</span> Behind Our
         Solutions

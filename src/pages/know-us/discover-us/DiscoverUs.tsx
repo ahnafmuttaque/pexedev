@@ -8,7 +8,7 @@ const DiscoverUs = () => {
       <SubtitleWithIcon>
         Discover who we are, what we do, and how we help
       </SubtitleWithIcon>
-      <h1 className={`${styles["discover-us__title"]} heading heading--xl`}>
+      <h1 className={`${styles["discover-us__title"]} heading heading--xxl`}>
         We design and develop digital products that help businesses grow through
         strategy, modern design, and technology.
       </h1>

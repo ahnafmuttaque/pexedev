@@ -31,7 +31,7 @@ const ExploreInnovation = () => {
           ))}
         </div>
         <h1
-          className={`${styles["explore-innovation__title"]} heading heading--xl heading--white`}
+          className={`${styles["explore-innovation__title"]} heading heading--xxl heading--white`}
         >
           PixeDev Excellence Through{" "}
           <span className="heading--blueItalic">Innovation.</span>

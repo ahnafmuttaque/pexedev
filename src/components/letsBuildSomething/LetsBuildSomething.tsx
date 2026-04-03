@@ -71,7 +71,7 @@ const LetsBuildSomething = () => {
             <SubtitleWithIcon>Contact Us</SubtitleWithIcon>
           )}
           <h2
-            className={`${styles.contactUs__title} ${shouldHaveBackground ? "" : "mt__20"}  heading  heading--xl`}
+            className={`${styles.contactUs__title} ${shouldHaveBackground ? "" : "mt__20"}  heading  heading--xxl`}
           >
             {title.normal}{" "}
             <span className="heading--blueItalic">{title.special}</span>

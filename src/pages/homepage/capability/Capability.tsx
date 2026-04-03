@@ -15,7 +15,7 @@ const Capability = () => {
         <header className={styles["capability__header"]}>
           <div>
             <h2
-              className={`${styles["capability__title"]} heading heading--xl`}
+              className={`${styles["capability__title"]} heading heading--xxl`}
             >
               Our Digital{" "}
               <span className="heading--blueItalic">Capabilities.</span>

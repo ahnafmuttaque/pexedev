@@ -2,7 +2,9 @@ import styles from "./Project.module.css";
 import { PROJECTS } from "../../../../data/projects.data";
 import type { FC } from "react";
 
-type ProjectProps = (typeof PROJECTS)[number];
+type ProjectProps = (typeof PROJECTS)[number] & {
+  onProjectSelect?: (id: number) => void;
+};
 
 const Project: FC<ProjectProps> = ({
   thumbnail,
@@ -10,9 +12,14 @@ const Project: FC<ProjectProps> = ({
   description,
   tags,
   time,
+  onProjectSelect,
+  id,
 }) => {
   return (
-    <section className={styles["project"]}>
+    <section
+      className={styles["project"]}
+      onClick={onProjectSelect ? () => onProjectSelect(id) : undefined}
+    >
       <div className={styles["project__thumbnail"]}>
         <img src={thumbnail} alt={title} />
       </div>

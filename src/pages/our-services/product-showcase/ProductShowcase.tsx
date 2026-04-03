@@ -78,7 +78,7 @@ const ShowCase: FC<ShowCaseProps> = ({ image, title, description, offers }) => {
         backgroundColor="white"
         className={styles["showcase__service-details"]}
       >
-        <h3 className="heading heading--lg">
+        <h3 className="heading heading--xl">
           {normalTitle}{" "}
           <span className="heading--blueItalic">{specialTitle}</span>
         </h3>

@@ -15,7 +15,7 @@ export const AboutUs = () => {
         </button>
       </div>
       <div className={styles["about-us__content"]}>
-        <h2 className={`${styles["about-us__title"]} heading heading--xl`}>
+        <h2 className={`${styles["about-us__title"]} heading heading--xxl`}>
           Helping Businesses Grow Through{" "}
           <span className="heading--blueItalic">Digital</span> Design.
         </h2>

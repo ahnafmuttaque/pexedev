@@ -7,7 +7,7 @@ const OurServices = () => {
   return (
     <div className={`${styles["our-services"]} max-inline padding__b-112`}>
       <SubtitleWithIcon>Our Services</SubtitleWithIcon>
-      <h1 className={`${styles["our-services__title"]} heading heading--xl`}>
+      <h1 className={`${styles["our-services__title"]} heading heading--xxl`}>
         Transforming Ideas into Powerful{" "}
         <span className="heading--blueItalic">Digital Products</span>
       </h1>

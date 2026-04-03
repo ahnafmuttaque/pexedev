@@ -51,7 +51,7 @@ const Reviews = () => {
       opacity={12}
     >
       <section className={`${styles.reviews} max-inline`}>
-        <h2 className={`${styles["reviews__title"]} heading heading--xl`}>
+        <h2 className={`${styles["reviews__title"]} heading heading--xxl`}>
           Some things <span className="heading--blueItalic">said about</span> us
           that <span className="heading--blueItalic">inspire us</span> to do
           better.

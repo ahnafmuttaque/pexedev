@@ -32,7 +32,7 @@ const Collaborate = () => {
       opacity={20}
       backgroundColor="white"
     >
-      <h2 className={`${styles["collaborate__title"]} heading--lg`}>
+      <h2 className={`${styles["collaborate__title"]} heading--xl`}>
         Trusted by Forward-Thinking{" "}
         <span className="heading--blueItalic">Companies.</span>
       </h2>

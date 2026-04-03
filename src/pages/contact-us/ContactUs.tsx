@@ -14,7 +14,7 @@ const ContactUs = () => {
         borderRadius="12px"
       >
         <div className={`${styles.contactUs} max-inline`}>
-          <h1 className="heading heading--xl">
+          <h1 className="heading heading--xxl">
             Let's Build Something Exceptional{" "}
             <span className="heading--blueItalic">Together</span>
           </h1>

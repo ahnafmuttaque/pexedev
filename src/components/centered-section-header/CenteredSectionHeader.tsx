@@ -19,7 +19,7 @@ const CenteredSectionHeader: FC<CenteredSectionHeaderProps> = ({
   return (
     <section className={`${className} padding__v-112 max-inline`}>
       <h1
-        className={`${styles["centered-section-header__title"]} heading heading--xl`}
+        className={`${styles["centered-section-header__title"]} heading heading--xxl`}
       >
         {title} <span className="heading--blueItalic">{special}</span>
       </h1>
