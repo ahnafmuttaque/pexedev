@@ -6,6 +6,12 @@
 .projects {
   padding-block: 112px;
 }
+/* this is for portfolio page where we don't need the top padding of projects section */
+[data-theme="dark"] {
+  .projects {
+    padding-block: 0 510px;
+  }
+}
 
 .projects__header {
   display: flex;

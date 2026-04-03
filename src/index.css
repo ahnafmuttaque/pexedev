@@ -4,7 +4,6 @@
     --color-primary-foreground: #7556fd;
     --color-secondary-foreground: #686868;
     /* nav related colors */
-    --color-nav-background: white;
     --color-link: #747474;
     --color-link-active: #7d60fd;
     /* end*/
@@ -24,8 +23,7 @@
   }
 
   [data-theme="dark"] {
-    --color-nav-background: black;
-    --color-nav-link: var(--color-footer-link-listItem);
+    /* nav links  related variables to switch colors in portfolio page */
     --color-link-active: white;
     --border-link: 1.5px solid #f6f5f514;
     --shadow-link: none;

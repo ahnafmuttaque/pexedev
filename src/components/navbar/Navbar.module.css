@@ -1,46 +1,52 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 30px 112px;
-  background-color: var(--color-nav-background);
-}
+@layer components {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 30px 112px;
+    background-color: transparent;
+  }
 
-[data-theme="dark"] .nav__wrapper {
-  background-color: var(--color-nav-background);
-}
+  [data-theme="dark"] .nav__wrapper {
+    background-color: black;
+  }
 
-.nav__links-container {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+  .nav__links-container {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
 
-.nav__link {
-  color: var(--color-nav-link);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 20px;
-  letter-spacing: -1%;
-  text-transform: capitalize;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  transition:
-    box-shadow 0.2s linear,
-    color 0.2s linear,
-    border-radius 0.2s linear;
-}
+  .nav__link {
+    color: #747474;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: -1%;
+    text-transform: capitalize;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    transition:
+      box-shadow 0.2s linear,
+      color 0.2s linear,
+      border-radius 0.2s linear;
+  }
 
-.nav__link:hover {
-  color: var(--color-link-active);
-}
+  [data-theme="dark"] .nav__link {
+    color: #b1b1b1;
+  }
 
-.nav__link.active {
-  color: var(--color-link-active);
-  border: var(--border-link);
-  border-radius: 1000px;
-  box-shadow: var(--shadow-link);
-  background-color: var(--bg-link);
+  .nav__link:hover {
+    color: var(--color-link-active);
+  }
+
+  .nav__link.active {
+    color: var(--color-link-active);
+    border: var(--border-link);
+    border-radius: 1000px;
+    box-shadow: var(--shadow-link);
+    background-color: var(--bg-link);
+  }
 }

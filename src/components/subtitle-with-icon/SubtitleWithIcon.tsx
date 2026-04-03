@@ -8,7 +8,7 @@ const SubtitleWithIcon: FC<PropsWithChildren> = ({ children }) => {
       <div className={styles["subtitle-icon-wrapper"]}>
         <img src={solarStarIcon} alt={"solar star icon"} />
       </div>
-      <p className={`text--secondary text--xs text--semibold`}>{children}</p>
+      <p className={`text--xs text--semibold`}>{children}</p>
     </div>
   );
 };
