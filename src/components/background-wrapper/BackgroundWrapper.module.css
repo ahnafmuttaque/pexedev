@@ -1,6 +1,7 @@
 .background-wrapper {
   position: relative;
   overflow: hidden;
+  z-index: 9999;
 }
 
 .backgrond-wrapper__image-container {

@@ -1,4 +1,5 @@
 import FaqSection from "../../components/faqSection/FaqSection";
+import LetsBuildSomething from "../../components/letsBuildSomething/LetsBuildSomething";
 import AboutUs from "./about-us/AboutUs";
 import Capability from "./capability/Capability";
 import Collaborate from "./collaborate/Collaborate";
@@ -23,6 +24,7 @@ const Homepage = () => {
       <Reviews />
       <Pricing />
       <FaqSection />
+      <LetsBuildSomething />
     </section>
   );
 };
