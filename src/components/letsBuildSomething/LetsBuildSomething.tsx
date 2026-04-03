@@ -2,6 +2,8 @@ import styles from "./LetsBuildSomething.module.css";
 import { CONTACT_US } from "../../data/shared.data";
 import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 import BackgroundWrapper from "../background-wrapper/BackgroundWrapper";
+import { useLocation } from "react-router";
+import SubtitleWithIcon from "../subtitle-with-icon/SubtitleWithIcon";
 
 type InputProps = ComponentPropsWithoutRef<"input"> & {
   children: ReactNode;
@@ -19,6 +21,7 @@ type TextAreaProps = ComponentPropsWithoutRef<"textarea"> & {
 };
 
 type ContactUsInputPorps = InputProps | SelectProps | TextAreaProps;
+
 const ContactUsInput: FC<ContactUsInputPorps> = ({ children, ...rest }) => {
   let inputNode: ReactNode;
   switch (rest.type) {
@@ -52,15 +55,24 @@ const ContactUsInput: FC<ContactUsInputPorps> = ({ children, ...rest }) => {
 
 const LetsBuildSomething = () => {
   const { title, description, metaLists } = CONTACT_US;
+  const location = useLocation();
+  const shouldHaveBackground = location.pathname !== "/contact-us";
   return (
     <BackgroundWrapper
-      url="/assets/professional-package-rectangle.png"
+      url={
+        shouldHaveBackground ? "/assets/professional-package-rectangle.png" : ""
+      }
       opacity={20}
     >
       <main className={`${styles.contactUs} max-inline`}>
         {/* right grid*/}
         <div className={styles.contactUs__content}>
-          <h2 className={`${styles.contactUs__title} heading  heading--xl`}>
+          {shouldHaveBackground || (
+            <SubtitleWithIcon>Contact Us</SubtitleWithIcon>
+          )}
+          <h2
+            className={`${styles.contactUs__title} ${shouldHaveBackground ? "" : "mt__20"}  heading  heading--xl`}
+          >
             {title.normal}{" "}
             <span className="heading--blueItalic">{title.special}</span>
           </h2>

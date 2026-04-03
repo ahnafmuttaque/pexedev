@@ -23,7 +23,7 @@ export const NAVIGATION_LINKS = [
   },
   {
     label: "contact us",
-    href: "/contact",
+    href: "/contact-us",
   },
 ] as const;
 

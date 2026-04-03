@@ -92,6 +92,11 @@
     color: white;
   }
 
+  /*margins*/
+  .mt__20 {
+    margin-top: 20px;
+  }
+
   /* hedings */
   .heading,
   .special-italic {
