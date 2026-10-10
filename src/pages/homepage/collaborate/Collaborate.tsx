@@ -3,8 +3,6 @@ import styles from "./Collaborate.module.css";
 import collaborateFrame from "/assets/background/loved-by-companies-bg.jpg";
 import Marquee from "react-fast-marquee";
 
-const RealMarquee = Marquee.default || Marquee;
-
 const COLLABORATE__COMPANIES = [
   {
     name: "",
@@ -37,13 +35,13 @@ const Collaborate = () => {
         <span className="heading--blueItalic">Companies.</span>
       </h2>
       <div className={styles["collaborate__companies"]}>
-        <RealMarquee pauseOnHover speed={100}>
+        <Marquee pauseOnHover speed={100}>
           {COLLABORATE__COMPANIES.map((company, index) => (
             <div key={index} className={styles["collaborate__company"]}>
               <img src={company.icon} alt={company.name} />
             </div>
           ))}
-        </RealMarquee>
+        </Marquee>
       </div>
     </BackgroundWrapper>
   );

@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { useState } from "react";
 import styles from "./Projects.module.css";
 import { PROJECTS } from "../../../data/projects.data";
 import Project from "./project/Project";
