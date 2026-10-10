@@ -20,9 +20,9 @@ type TextAreaProps = ComponentPropsWithoutRef<"textarea"> & {
   type: "textarea";
 };
 
-type ContactUsInputPorps = InputProps | SelectProps | TextAreaProps;
+type ContactUsInputProps = InputProps | SelectProps | TextAreaProps;
 
-const ContactUsInput: FC<ContactUsInputPorps> = ({ children, ...rest }) => {
+const ContactUsInput: FC<ContactUsInputProps> = ({ children, ...rest }) => {
   let inputNode: ReactNode;
   switch (rest.type) {
     case "textarea":

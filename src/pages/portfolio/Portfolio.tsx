@@ -3,7 +3,7 @@ import SubtitleWithIcon from "../../components/subtitle-with-icon/SubtitleWithIc
 import { PROJECTS } from "../../data/projects.data";
 import Project from "../homepage/projects/project/Project";
 import styles from "./Portfolio.module.css";
-import WholeProject from "./whole-project/WholePorject";
+import WholeProject from "./whole-project/WholeProject";
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);

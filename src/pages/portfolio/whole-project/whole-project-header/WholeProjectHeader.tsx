@@ -1,6 +1,6 @@
 import styles from "./WholeProjectHeader.module.css";
 
-const WhoeleProjectHeader = () => {
+const WholeProjectHeader = () => {
   return (
     <header className={`${styles["whole-project__header"]}`}>
       <div className={styles["whole-project__header-left"]}>
@@ -46,4 +46,4 @@ const WhoeleProjectHeader = () => {
   );
 };
 
-export default WhoeleProjectHeader;
+export default WholeProjectHeader;

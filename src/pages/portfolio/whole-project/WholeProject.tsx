@@ -1,17 +1,17 @@
 import { createPortal } from "react-dom";
 import styles from "./WholeProject.module.css";
 import type { FC } from "react";
-import WhoeleProjectHeader from "./whole-project-header/WholeProjectHeader";
+import WholeProjectHeader from "./whole-project-header/WholeProjectHeader";
 import CancelButton from "./cancel-button/CancelButton";
 import projectFigure from "/assets/my-genie-template.png";
 import ShortDescription from "./short-description/ShortDescription";
 
-interface WholePorjectProps {
+interface WholeProjectProps {
   selected?: boolean;
   onClose: () => void;
 }
 
-const WholeProject: FC<WholePorjectProps> = ({ onClose, selected }) => {
+const WholeProject: FC<WholeProjectProps> = ({ onClose, selected }) => {
   return createPortal(
     <div
       className={`${styles["whole-project__overlay"]} ${selected ? styles["up"] : ""}`}
@@ -19,7 +19,7 @@ const WholeProject: FC<WholePorjectProps> = ({ onClose, selected }) => {
       <div className={styles["whole-project"]}>
         <CancelButton onClose={onClose} />
         <div className="max-inline">
-          <WhoeleProjectHeader />
+          <WholeProjectHeader />
           <div className={`${styles["whole-project__figure"]}`}>
             <img src={projectFigure} alt="project" />
           </div>

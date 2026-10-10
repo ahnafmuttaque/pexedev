@@ -10,7 +10,7 @@ This roadmap tracks the execution of codebase organization, dynamic functionalit
   - Fix `Marquee.default || Marquee` typing mismatch in [Collaborate.tsx](file:///e:/Development/pexedev/src/pages/homepage/collaborate/Collaborate.tsx) and [SliderHero.tsx](file:///e:/Development/pexedev/src/pages/homepage/slider-hero/SliderHero.tsx) to pass `npx tsc -b`.
   - Fix missing `key` props on outer elements in [SliderHero.tsx](file:///e:/Development/pexedev/src/pages/homepage/slider-hero/SliderHero.tsx).
   - Remove unused imports (e.g., `FC` in [Projects.tsx](file:///e:/Development/pexedev/src/pages/homepage/projects/Projects.tsx)) to pass `npm run lint`.
-- [ ] **1.2 Clean Up File Naming & Folder Typos**
+- [x] **1.2 Clean Up File Naming & Folder Typos**
   - Rename `src/components/footer/Cooyright` -> `Copyright` and update imports.
   - Rename `src/pages/portfolio/whole-project/WholePorject.tsx` -> `WholeProject.tsx` and fix component/prop typos (`WhoeleProjectHeader`, `WholePorjectProps`).
   - Fix typo `ContactUsInputPorps` in [LetsBuildSomething.tsx](file:///e:/Development/pexedev/src/components/letsBuildSomething/LetsBuildSomething.tsx).
