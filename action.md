@@ -34,7 +34,7 @@ This roadmap tracks the execution of codebase organization, dynamic functionalit
   - Connect Capability "Contact Us" -> `/contact-us`.
   - Connect FAQ button "contact us" -> `/contact-us`.
   - Connect WholeProject modal buttons ("Start your Project", "Contact Us") -> `/contact-us`.
-- [ ] **2.4 Form Handling & FAQ Interaction Polish**
+- [x] **2.4 Form Handling & FAQ Interaction Polish**
   - In [LetsBuildSomething.tsx](file:///e:/Development/pexedev/src/components/letsBuildSomething/LetsBuildSomething.tsx), wrap submit buttons inside `<form>`, add real budget options, support `type="email"`, and add client-side validation with a success notification.
   - In [FaqSection.tsx](file:///e:/Development/pexedev/src/components/faqSection/FaqSection.tsx), make the entire question row clickable to expand/collapse with accessible ARIA attributes.
 

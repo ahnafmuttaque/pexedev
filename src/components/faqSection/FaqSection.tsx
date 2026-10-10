@@ -49,19 +49,28 @@ const FaqSection = () => {
             borderRadius="16px"
           >
             <div className={styles["faqSection__faq-item"]}>
-              <div className={styles["faqSection__faq-question"]}>
+              <div
+                className={styles["faqSection__faq-question"]}
+                onClick={() => onFaqClick(faq.id)}
+                role="button"
+                tabIndex={0}
+                aria-expanded={activeFaq === faq.id}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onFaqClick(faq.id);
+                  }
+                }}
+              >
                 <h2>
                   <span className="bullet-point"></span>
                   <span>{faq.question}</span>
                 </h2>
-                <span
-                  className={styles["faqSection__icon"]}
-                  onClick={() => onFaqClick(faq.id)}
-                >
+                <span className={styles["faqSection__icon"]}>
                   {activeFaq === faq.id ? (
-                    <img src={icons.minus} alt={faq.question} />
+                    <img src={icons.minus} alt="Collapse" />
                   ) : (
-                    <img src={icons.plus} alt={faq.question} />
+                    <img src={icons.plus} alt="Expand" />
                   )}
                 </span>
               </div>

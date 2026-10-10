@@ -1,13 +1,19 @@
 import styles from "./LetsBuildSomething.module.css";
 import { CONTACT_US } from "../../data/shared.data";
-import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
+import {
+  type ComponentPropsWithoutRef,
+  type FC,
+  type ReactNode,
+  useRef,
+  useState,
+} from "react";
 import BackgroundWrapper from "../background-wrapper/BackgroundWrapper";
 import { useLocation } from "react-router";
 import SubtitleWithIcon from "../subtitle-with-icon/SubtitleWithIcon";
 
 type InputProps = ComponentPropsWithoutRef<"input"> & {
   children: ReactNode;
-  type: "text";
+  type: "text" | "email";
 };
 
 type SelectProps = ComponentPropsWithoutRef<"select"> & {
@@ -24,16 +30,21 @@ type ContactUsInputProps = InputProps | SelectProps | TextAreaProps;
 
 const ContactUsInput: FC<ContactUsInputProps> = ({ children, ...rest }) => {
   let inputNode: ReactNode;
+  const isFullWidth = rest.type === "textarea";
   switch (rest.type) {
     case "textarea":
       inputNode = <textarea {...rest} />;
       break;
     case "select":
       inputNode = (
-        <select {...rest} defaultValue={"default"}>
-          <option value={"default"} disabled>
+        <select {...rest} defaultValue="">
+          <option value="" disabled>
             Select your Range
           </option>
+          <option value="500-1500">$500 – $1,500</option>
+          <option value="1500-3000">$1,500 – $3,000</option>
+          <option value="3000-5000">$3,000 – $5,000</option>
+          <option value="5000+">$5,000+</option>
         </select>
       );
       break;
@@ -41,7 +52,9 @@ const ContactUsInput: FC<ContactUsInputProps> = ({ children, ...rest }) => {
       inputNode = <input {...rest} />;
   }
   return (
-    <div className={styles["contactUs__form-item"]}>
+    <div
+      className={`${styles["contactUs__form-item"]} ${isFullWidth ? styles["contactUs__form-item--full"] : ""}`}
+    >
       <label>
         {children}
         {rest.required && (
@@ -57,6 +70,22 @@ const LetsBuildSomething = () => {
   const { title, description, metaLists } = CONTACT_US;
   const location = useLocation();
   const shouldHaveBackground = location.pathname !== "/contact-us";
+
+  const [submitted, setSubmitted] = useState(false);
+  const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setUploadedFileName(e.target.files[0].name);
+    }
+  };
+
   return (
     <BackgroundWrapper
       url={
@@ -90,61 +119,98 @@ const LetsBuildSomething = () => {
 
         {/* contact us form */}
         <div className={styles.contactUs__form}>
-          <form>
-            <ContactUsInput
-              required
-              placeholder="Enter your full name"
-              type="text"
-            >
-              Full Name
-            </ContactUsInput>
-            <ContactUsInput placeholder="Enter your company name" type="text">
-              Company Name
-            </ContactUsInput>
-            <ContactUsInput
-              placeholder="Enter your email address"
-              required
-              type="text"
-            >
-              Email ID
-            </ContactUsInput>
-            <ContactUsInput
-              placeholder="Enter your service"
-              required
-              type="text"
-            >
-              What's your service
-            </ContactUsInput>
-            <ContactUsInput type="select">Budget Range</ContactUsInput>
-            <ContactUsInput
-              type="textarea"
-              required
-              placeholder="Write your project idea"
-            >
-              Project Details
-            </ContactUsInput>
-          </form>
-          {/* contact us form actions */}
-          <div className={styles.contactUs__formActions}>
-            <button
-              type="button"
-              className={`${styles.contactUs__upload} button`}
-            >
-              Upload Doc's{" "}
-              <div>
-                <img src="/assets/document.png" alt="document icon" />
+          {submitted ? (
+            <div className={styles.contactUs__success}>
+              <h3>Thank You!</h3>
+              <p>
+                We have received your project inquiry. Our team will analyze
+                your requirements and get in touch within 24 hours.
+              </p>
+              <button
+                type="button"
+                className="button button--black"
+                onClick={() => {
+                  setSubmitted(false);
+                  setUploadedFileName(null);
+                }}
+              >
+                Send Another Request
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <ContactUsInput
+                required
+                placeholder="Enter your full name"
+                type="text"
+              >
+                Full Name
+              </ContactUsInput>
+              <ContactUsInput placeholder="Enter your company name" type="text">
+                Company Name
+              </ContactUsInput>
+              <ContactUsInput
+                placeholder="Enter your email address"
+                required
+                type="email"
+              >
+                Email ID
+              </ContactUsInput>
+              <ContactUsInput
+                placeholder="Enter your service"
+                required
+                type="text"
+              >
+                What's your service
+              </ContactUsInput>
+              <ContactUsInput type="select" required>
+                Budget Range
+              </ContactUsInput>
+              <ContactUsInput
+                type="textarea"
+                required
+                placeholder="Write your project idea"
+              >
+                Project Details
+              </ContactUsInput>
+
+              {/* hidden file input */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                style={{ display: "none" }}
+                onChange={handleFileUpload}
+              />
+
+              {/* contact us form actions */}
+              <div className={styles.contactUs__formActions}>
+                <button
+                  type="button"
+                  className={`${styles.contactUs__upload} button`}
+                  onClick={() => fileInputRef.current?.click()}
+                  title={uploadedFileName || "Upload project documents"}
+                >
+                  {uploadedFileName
+                    ? uploadedFileName.length > 15
+                      ? `${uploadedFileName.slice(0, 15)}...`
+                      : uploadedFileName
+                    : "Upload Doc's"}{" "}
+                  <div>
+                    <img src="/assets/document.png" alt="document icon" />
+                  </div>
+                </button>
+                <button
+                  className={`${styles.contactUs__submit} button button--black`}
+                  type="submit"
+                >
+                  Submit Request
+                  <div>
+                    <img src="/assets/telegram.png" alt="submit icon" />
+                  </div>
+                </button>
               </div>
-            </button>
-            <button
-              className={`${styles.contactUs__submit} button button--black`}
-              type="submit"
-            >
-              Submit Request
-              <div>
-                <img src="/assets/telegram.png" alt="submit icon" />
-              </div>
-            </button>
-          </div>
+            </form>
+          )}
         </div>
       </main>
     </BackgroundWrapper>
