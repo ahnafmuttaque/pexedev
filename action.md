@@ -25,7 +25,7 @@ This roadmap tracks the execution of codebase organization, dynamic functionalit
 - [x] **2.1 Interactive Category Filtering on Projects**
   - Implement active category filtering on [Projects.tsx](file:///e:/Development/pexedev/src/pages/homepage/projects/Projects.tsx) (`All`, `Website Design`, `Mobile app`, `SaaS Platform`).
   - Add smooth filtering transitions.
-- [ ] **2.2 Dynamic Case Study Modal in Portfolio**
+- [x] **2.2 Dynamic Case Study Modal in Portfolio**
   - Connect [Portfolio.tsx](file:///e:/Development/pexedev/src/pages/portfolio/Portfolio.tsx) to [WholeProject.tsx](file:///e:/Development/pexedev/src/pages/portfolio/whole-project/WholeProject.tsx) so clicking a project dynamically injects that project's case study data.
   - Implement backdrop click-to-close, `Escape` key listener, and lock background scrolling (`overflow: hidden` on body when open).
 - [ ] **2.3 Universal Navigation & Interactive CTAs**

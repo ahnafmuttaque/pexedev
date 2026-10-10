@@ -16,11 +16,13 @@ const Portfolio = () => {
     setSelectedProject(null);
   }, []);
 
-  console.log(selectedProject);
+  const currentProject =
+    PROJECTS.find((p) => p.id === selectedProject) ?? null;
 
   return (
     <>
       <WholeProject
+        project={currentProject}
         onClose={handleCloseProject}
         selected={Boolean(selectedProject)}
       />
@@ -37,9 +39,9 @@ const Portfolio = () => {
             </h1>
           </div>
           <section className="projects__gallery">
-            {PROJECTS.map((project, index) => (
+            {PROJECTS.map((project) => (
               <Project
-                key={index}
+                key={project.id}
                 {...project}
                 onProjectSelect={handleSelectedProject}
               />
