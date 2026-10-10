@@ -1,7 +1,7 @@
 import BackgroundWrapper from "../../../components/background-wrapper/BackgroundWrapper";
 import styles from "./Collaborate.module.css";
 import collaborateFrame from "/assets/background/loved-by-companies-bg.jpg";
-import Marquee from "react-fast-marquee";
+import Marquee from "../../../components/marquee/Marquee";
 
 const COLLABORATE__COMPANIES = [
   {

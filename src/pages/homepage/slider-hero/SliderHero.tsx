@@ -1,5 +1,5 @@
 import styles from "./SliderHero.module.css";
-import Marquee from "react-fast-marquee";
+import Marquee from "../../../components/marquee/Marquee";
 
 const images = [
   "/assets/marquees/marquee (1).png",
