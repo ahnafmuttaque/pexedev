@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="100%" height="100%">
+  <!-- Dark background preview -->
+  <rect width="240" height="160" fill="#000000" rx="12" />
+
+  <g transform="translate(45, 25)">
+    <!-- Right Purple / Violet D-shape / Loop -->
+    <path 
+      d="M 52,18 
+         C 88,18 116,40 116,68 
+         C 116,96 88,118 52,118 
+         C 46,118 38,116 32,112 
+         C 44,98 56,76 56,58 
+         C 56,42 46,28 36,22 
+         C 41,19 46,18 52,18 Z" 
+      fill="#7B5CFA" 
+    />
+
+    <!-- Left White Ribbon / Stem -->
+    <path 
+      d="M 28,10 
+         C 48,10 60,26 60,46 
+         C 60,68 46,94 14,124 
+         L 4,124 
+         C 14,106 24,84 26,64 
+         C 28,48 20,38 12,32 
+         C 12,18 18,10 28,10 Z" 
+      fill="#FFFFFF" 
+    />
+  </g>
+</svg>

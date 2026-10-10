@@ -14,7 +14,7 @@ This roadmap tracks the execution of codebase organization, dynamic functionalit
   - Rename `src/components/footer/Cooyright` -> `Copyright` and update imports.
   - Rename `src/pages/portfolio/whole-project/WholePorject.tsx` -> `WholeProject.tsx` and fix component/prop typos (`WhoeleProjectHeader`, `WholePorjectProps`).
   - Fix typo `ContactUsInputPorps` in [LetsBuildSomething.tsx](file:///e:/Development/pexedev/src/components/letsBuildSomething/LetsBuildSomething.tsx).
-- [ ] **1.3 Asset & Document Health**
+- [x] **1.3 Asset & Document Health**
   - Add missing `favicon.svg` in `public/` matching the agency branding logo.
   - Add `ScrollToTop` helper in [RootLayout.tsx](file:///e:/Development/pexedev/src/layouts/RootLayout.tsx) to reset scroll position on route transitions.
 

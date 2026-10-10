@@ -1,8 +1,7 @@
-import { Outlet } from "react-router";
-// import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
+import { Outlet, useLocation } from "react-router";
 import Navbar from "../components/navbar/Navbar";
-import { useLocation } from "react-router";
+import Footer from "../components/footer/Footer";
+import ScrollToTop from "../components/scroll-to-top/ScrollToTop";
 
 export default function RootLayout() {
   const location = useLocation();
@@ -18,6 +17,7 @@ export default function RootLayout() {
       className={shouldHaveBackgroundImage ? "layout" : ""}
       data-theme={isDarkTheme ? "dark" : undefined}
     >
+      <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />
