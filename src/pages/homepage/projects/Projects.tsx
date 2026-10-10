@@ -1,14 +1,24 @@
 import { useState } from "react";
 import styles from "./Projects.module.css";
-import { PROJECTS } from "../../../data/projects.data";
+import { PROJECTS, type ProjectItem } from "../../../data/projects.data";
 import Project from "./project/Project";
 
-export const Projects = () => {
-  const [activeItem, setActiveItem] = useState<string>("All");
+const CATEGORIES = [
+  "All",
+  "Website Design",
+  "Mobile app",
+  "SaaS Platform",
+] as const;
 
-  const handleItemClick = (item: string) => {
-    setActiveItem(item);
-  };
+type Category = (typeof CATEGORIES)[number];
+
+export const Projects = () => {
+  const [activeItem, setActiveItem] = useState<Category>("All");
+
+  const filteredProjects: ProjectItem[] =
+    activeItem === "All"
+      ? PROJECTS
+      : PROJECTS.filter((project) => project.category === activeItem);
 
   return (
     <div className={styles["projects__wrapper"]}>
@@ -21,24 +31,22 @@ export const Projects = () => {
             <span className="heading--blueItalic">Impactful Products.</span>
           </h2>
           <ul className={styles["projects__menu"]}>
-            {["All", "Website Design", "Mobile app", "SaaS Platform"].map(
-              (item) => (
-                <li
-                  key={item}
-                  onClick={() => handleItemClick(item)}
-                  className={`${styles["projects__menu-item"]} ${activeItem === item ? styles["projects__menu-item--active"] : ""}`}
-                >
-                  {item}
-                </li>
-              ),
-            )}
+            {CATEGORIES.map((item) => (
+              <li
+                key={item}
+                onClick={() => setActiveItem(item)}
+                className={`${styles["projects__menu-item"]} ${activeItem === item ? styles["projects__menu-item--active"] : ""}`}
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* projects content */}
         <div className={"projects__gallery"}>
-          {PROJECTS.map((project, index) => (
-            <Project key={index} {...project} />
+          {filteredProjects.map((project) => (
+            <Project key={project.id} {...project} />
           ))}
         </div>
       </section>
@@ -47,3 +55,4 @@ export const Projects = () => {
 };
 
 export default Projects;
+

@@ -22,7 +22,7 @@ This roadmap tracks the execution of codebase organization, dynamic functionalit
 
 ## Phase 2: Option A — Functionality & Interactivity
 
-- [ ] **2.1 Interactive Category Filtering on Projects**
+- [x] **2.1 Interactive Category Filtering on Projects**
   - Implement active category filtering on [Projects.tsx](file:///e:/Development/pexedev/src/pages/homepage/projects/Projects.tsx) (`All`, `Website Design`, `Mobile app`, `SaaS Platform`).
   - Add smooth filtering transitions.
 - [ ] **2.2 Dynamic Case Study Modal in Portfolio**
