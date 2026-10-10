@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import styles from "./CapabilityItem.module.css";
 import { CAPABILITIES } from "../../../../data/homepage.data";
 import type { FC } from "react";
@@ -10,6 +11,7 @@ const CapabilityItem: FC<CapabilityItemProps> = ({
   long,
   wide,
 }: CapabilityItemProps) => {
+  const navigate = useNavigate();
   return (
     <div className={styles["capability-item"]}>
       <div className={styles["capability__item-content"]}>
@@ -19,7 +21,10 @@ const CapabilityItem: FC<CapabilityItemProps> = ({
         >
           {description}
         </p>
-        <button className={styles["capability__item-button"]}>
+        <button
+          className={styles["capability__item-button"]}
+          onClick={() => navigate("/our-services")}
+        >
           <span>{CAPABILITIES.button.label}</span>
           <span>
             <img src={CAPABILITIES.button.icon} alt="arrow" />

@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import BackgroundWrapper from "../../../components/background-wrapper/BackgroundWrapper";
 import { CAPABILITIES } from "../../../data/homepage.data";
 import CapabilityItem from "./capability-item/CapabilityItem";
 import styles from "./Capability.module.css";
 
 const Capability = () => {
+  const navigate = useNavigate();
   return (
     <BackgroundWrapper
       url="/assets/background/design-process.jpg"
@@ -27,7 +29,12 @@ const Capability = () => {
               that move businesses forward.
             </p>
           </div>
-          <button className="button button--black">Contact Us</button>
+          <button
+            className="button button--black"
+            onClick={() => navigate("/contact-us")}
+          >
+            Contact Us
+          </button>
         </header>
 
         <section className={styles["capability__lists"]}>

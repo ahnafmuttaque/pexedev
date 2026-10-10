@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import BackgroundWrapper from "../../../components/background-wrapper/BackgroundWrapper";
 import styles from "./ExploreInnovation.module.css";
 import exploreInnovationBg from "/assets/background/bg-explore-innovation.jpg";
@@ -11,6 +12,7 @@ const SHAPES = [
 ];
 
 const ExploreInnovation = () => {
+  const navigate = useNavigate();
   return (
     <BackgroundWrapper
       url={exploreInnovationBg}
@@ -46,7 +48,8 @@ const ExploreInnovation = () => {
           become At our agency
         </p>
         <button
-          className={`${styles["explore-innovation__button"]} button button--white`}
+          className="button button--white"
+          onClick={() => navigate("/portfolio")}
         >
           Explore our Projects
         </button>

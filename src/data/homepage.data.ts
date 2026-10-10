@@ -7,8 +7,8 @@ export const HERO = {
   paragraph:
     "We help startups and businesses build modern, scalable, and user-friendly digital products. From strategy and design to development, we create impactful digital experiences that help brands grow.",
   buttons: [
-    { label: "start your project", href: "" },
-    { label: "explore projects", href: "" },
+    { label: "start your project", href: "/contact-us" },
+    { label: "explore projects", href: "/portfolio" },
   ],
   stat: {
     title: {
@@ -57,7 +57,7 @@ export const CAPABILITIES = {
   ],
   button: {
     label: "Explore Services",
-    href: "",
+    href: "/our-services",
     icon: "/assets/arrow-up-right.png",
   },
   spiral: "/assets/spiral.png",

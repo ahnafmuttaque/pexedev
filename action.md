@@ -28,7 +28,7 @@ This roadmap tracks the execution of codebase organization, dynamic functionalit
 - [x] **2.2 Dynamic Case Study Modal in Portfolio**
   - Connect [Portfolio.tsx](file:///e:/Development/pexedev/src/pages/portfolio/Portfolio.tsx) to [WholeProject.tsx](file:///e:/Development/pexedev/src/pages/portfolio/whole-project/WholeProject.tsx) so clicking a project dynamically injects that project's case study data.
   - Implement backdrop click-to-close, `Escape` key listener, and lock background scrolling (`overflow: hidden` on body when open).
-- [ ] **2.3 Universal Navigation & Interactive CTAs**
+- [x] **2.3 Universal Navigation & Interactive CTAs**
   - Connect hero buttons ("start your project" -> `/contact-us`, "explore projects" -> `/portfolio`).
   - Connect About Us "Learn More About Us" -> `/know-us`.
   - Connect Capability "Contact Us" -> `/contact-us`.

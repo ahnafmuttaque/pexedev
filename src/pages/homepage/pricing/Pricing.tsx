@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import { useNavigate } from "react-router";
 import { PRICING_DATA } from "../../../data/homepage.data";
 import styles from "./Pricing.module.css";
 import pricingIcon from "/assets/pricing-icon.png";
@@ -15,6 +16,7 @@ const PricingCard: FC<PricingCardProps> = ({
   button,
   listItems,
 }) => {
+  const navigate = useNavigate();
   return (
     <div className={styles["pricing__card"]}>
       <h3 className={styles["pricing__card-title"]}>{title}</h3>
@@ -35,6 +37,7 @@ const PricingCard: FC<PricingCardProps> = ({
       </div>
       <button
         className={`button button--black ${styles["pricing__card-button"]}`}
+        onClick={() => navigate("/contact-us")}
       >
         {button.label}
       </button>

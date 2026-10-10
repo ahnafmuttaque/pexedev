@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { FAQ_SECTION } from "../../data/shared.data";
 import styles from "./FaqSection.module.css";
 import BackgroundWrapper from "../background-wrapper/BackgroundWrapper";
 import designProcessBackgrond from "/assets/background/design-process.jpg";
 
 const FaqSection = () => {
+  const navigate = useNavigate();
   const [activeFaq, setActiveFaq] = useState<string | undefined>(undefined);
 
   const onFaqClick = (faqId: string) => {
@@ -32,6 +34,7 @@ const FaqSection = () => {
         </p>
         <button
           className={`${styles["faqSection__button"]} button button--black`}
+          onClick={() => navigate("/contact-us")}
         >
           {button}
         </button>

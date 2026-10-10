@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import threeFourth from "/assets/three-fourth.png";
 import oneFourth from "/assets/one-fourth.png";
 import playIcon from "/assets/play.png";
 
 import styles from "./AboutUs.module.css";
 export const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <section className={`${styles["about-us"]} max-inline`}>
       {/* About us gallery */}
@@ -29,7 +31,12 @@ export const AboutUs = () => {
           founders, and growing companies to transform ideas into successful
           digital products.
         </p>
-        <button className="button button--black">Learn More About Us</button>
+        <button
+          className="button button--black"
+          onClick={() => navigate("/know-us")}
+        >
+          Learn More About Us
+        </button>
       </div>
     </section>
   );

@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router";
 import BackgroundWrapper from "../../components/background-wrapper/BackgroundWrapper";
 import LetsBuildSomething from "../../components/letsBuildSomething/LetsBuildSomething";
 import styles from "./ContactUs.module.css";
 
 const ContactUs = () => {
+  const navigate = useNavigate();
+
+  const handleStartProject = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <LetsBuildSomething />
@@ -24,8 +31,18 @@ const ContactUs = () => {
             that delivers real value and supports your business growth.
           </p>
           <div className={styles.contactUs__cta}>
-            <button className="button button--black">Start your Project</button>
-            <button className="button button--white">Explore Projects</button>
+            <button
+              className="button button--black"
+              onClick={handleStartProject}
+            >
+              Start your Project
+            </button>
+            <button
+              className="button button--white"
+              onClick={() => navigate("/portfolio")}
+            >
+              Explore Projects
+            </button>
           </div>
         </div>
       </BackgroundWrapper>
