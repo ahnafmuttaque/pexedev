@@ -93,7 +93,7 @@ const LetsBuildSomething = () => {
       }
       opacity={20}
     >
-      <main className={`${styles.contactUs} max-inline`}>
+      <section className={`${styles.contactUs} max-inline`}>
         {/* right grid*/}
         <div className={styles.contactUs__content}>
           {shouldHaveBackground || (
@@ -212,7 +212,7 @@ const LetsBuildSomething = () => {
             </form>
           )}
         </div>
-      </main>
+      </section>
     </BackgroundWrapper>
   );
 };
